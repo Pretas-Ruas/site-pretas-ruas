@@ -1,0 +1,67 @@
+<h1 class="page-header">Respostas do formulário "{{model.form.name}}"</h1>
+
+<ul class="nav nav-tabs">
+  <li role="presentation">
+    {{#link-to 'd-forms.item' model.form.id}}Campos{{/link-to}}
+  </li>
+  <li role="presentation">
+    {{#link-to 'd-forms.item.edit' model.form.id}}Editar formulário{{/link-to}}
+  </li>
+  <li role="presentation">
+    {{#link-to 'd-forms.item.use' model.form.id}}Usar{{/link-to}}
+  </li>
+  <li role="presentation" class="active">
+    {{#link-to 'd-forms.item.answers' model.form.id}}Respostas{{/link-to}}
+  </li>
+</ul>
+
+<div class="tab-content">
+
+<div class="actions">
+  <a href="{{model.ENV.API_HOST}}/d-form-answer-export.csv?formId={{model.form.id}}" class="btn btn-default btn-sm" download><i class="glyphicon glyphicon-download-alt
+"></i> Exportar todos os dados</a>
+</div>
+
+<p class="help-block">O arquivo da exportação tem o formato de CSV com dados separados por vírgula.</p>
+
+<br>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>ID</th>
+        {{#each model.fields as |field index|}}
+          {{#if (lt index 5)}}
+            {{#unless field.informationField}}
+              <th>{{field.label}}</th>
+            {{/unless}}
+          {{/if}}
+        {{/each}}
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model.records as |answer|}}
+        <tr>
+          <td>{{answer.id}}</td>
+          {{#each model.fields as |field index|}}
+            {{#if (lt index 5)}}
+              {{#unless field.informationField}}
+                <td>
+                  {{get answer.vCacheByFieldId field.id}}
+                </td>
+              {{/unless}}
+            {{/if}}
+          {{/each}}
+
+          <td>{{#link-to 'd-forms.item.answers.item' model.form.id answer.id class="btn btn-sm btn-default"}}Ver{{/link-to}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+<p>Essa lista exibe no máximo 25 items, use o botão de exportação para baixar a lista completa.</p>
+
+</div>{{!-- END tab-content --}}

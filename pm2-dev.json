@@ -1,0 +1,19 @@
+{
+  "apps" : [{
+    "name"        : "ong",
+    "script"      : "app.js",
+    "cwd"         : "/home/a/projetos/linky/wejs-ong/server/site",
+    "log_date_format"  : "YYYY-MM-DD HH:mm Z",
+    "error_file" : "/home/a/projetos/linky/wejs-ong/server/site/logs/app-err.log",
+    "out_file"   : "/home/a/projetos/linky/wejs-ong/server/site/logs/app-out.log",
+    "pid_file"   : "/home/a/projetos/linky/wejs-ong/server/site/logs/app.pid",
+    "port"        : 5600,
+    "instances"  : 3,
+    "exec_mode"  : "cluster_mode",
+    "env": {
+        "NODE_ENV": "production",
+        "ENABLE_REDIS": "1",
+        "REDIS_URL": "redis://127.0.0.1:5679/1"
+    }
+  }]
+}

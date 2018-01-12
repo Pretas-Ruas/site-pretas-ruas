@@ -1,0 +1,108 @@
+{{#if model.record.id}}
+{{else}}
+  <h1 class="page-header">Criar formulário</h1>
+{{/if}}
+
+<form {{action "save" model.record model.alias on="submit"}}>
+  <div class="row">
+    <div class="col-md-8">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <i class="fa fa-pencil-square" aria-hidden="true"></i> Dados básicos
+        </div>
+        <div class="panel-body">
+          <fieldset>
+            <div class="form-group">
+              <label>Nome do formulário*:</label>
+              {{input name="name" value=model.record.name class="form-control" required="required"}}
+              <p class="help-block">Um nome simples e único para o formulário.</p>
+            </div>
+            <div class="form-group">
+              <label>Título do formulário:</label>
+              {{input name="title" value=model.record.title class="form-control"}}
+              <p class="help-block">Título que aparece para o usuário acima do formulário.</p>
+            </div>
+            <div class="form-group">
+              <label>Seu nome ou empresa*:</label>
+              {{input name="formName" value=model.record.formName class="form-control" required="required"}}
+              <p class="help-block">Esse nome é usado como nome de exibição no "from" ou "replyTo" do e-mail.</p>
+            </div>
+            <div class="form-group">
+              <label>E-mail de resposta (replyTo)*:</label>
+              {{input type="email" name="replyTo" value=model.record.replyTo class="form-control" required="required"}}
+              <p class="help-block">E-mail de resposta.
+                <br>Para garantir o envio: use um e-mail com o mesmo domínio do site.</p>
+            </div>
+
+            <div class="form-group">
+              <label>Assunto (subject):</label>
+              {{input name="subject" value=model.record.subject class="form-control"}}
+              <p class="help-block">Assunto do email.<br>Deixe o campo vazio para usar o assunto padrão definido nos templates de email.</p>
+            </div>
+
+            <div class="form-group">
+              <label>E-mail de envio (to):</label>
+              {{input type="email" name="to" value=model.record.to class="form-control"}}
+              <p class="help-block">E-mails separados por vírgula para onde os dados serão enviados.</p>
+            </div>
+
+            <div class="form-group">
+              <label>URL de sucesso:</label>
+              {{input type="text" name="redirectToOnSuccess" value=model.record.redirectToOnSuccess class="form-control"}}
+              <p class="help-block">URL para onde o usuário será redirecionado após preencher e enviar o formuário.</p>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <i class="fa fa-globe" aria-hidden="true"></i> {{t 'content.form.publish.Title'}}
+        </div>
+        <div class="panel-body">
+          <fieldset>
+            <div class="form-group">
+              <label>
+                {{input type="checkbox" checked=model.record.published}} {{t 'form-content-published'}}?
+              </label>
+              {{#if model.record.publishedAt}}
+                <div class="form-group">
+                  <strong>Publicado em:</strong> {{moment-format model.record.publishedAt "DD/MM/YYYY h:mm a"}}
+                </div>
+              {{/if}}
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading"><i class="fa fa-random"></i> URL</div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label>URL de acesso*:</label>
+            {{input name="setAlias" value=model.alias.alias class="form-control" placeholder="Ex /sobre" }}
+            <p class="help-block">Url limpa de acesso ao conteúdo, use um texto simples sem espaço ou acentuação. Ex /sobre</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div>
+        <button class="btn btn-primary">
+          <i class="fa fa-save"></i>
+          Salvar
+        </button>
+        <button {{action 'goTo' 'd-forms.index'}} type="button" class="btn btn-default">
+          <i class="fa fa-step-backward"></i>
+          Formulários
+        </button>
+      </div>
+    </div>
+
+  </div>
+</form>

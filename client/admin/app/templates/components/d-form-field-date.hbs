@@ -1,0 +1,9 @@
+{{#bs-form model=field onSubmit=(action "save") as |form|}}
+  {{form.element controlType="text" label="Label" property="label"}}
+
+  {{form.element controlType="text" label="Placeholder" property="placeholder"}}
+  {{form.element controlType="text" label="Texto de ajuda" property="help"}}
+  {{form.element controlType="checkbox" label="Pode ficar vazio?" property="allowNull"}}
+
+  {{#bs-button class="btn-sm" onClick=(action "deleteItem")}}Deletar{{/bs-button}}
+{{/bs-form}}

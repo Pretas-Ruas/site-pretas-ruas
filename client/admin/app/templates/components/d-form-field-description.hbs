@@ -1,0 +1,12 @@
+{{#bs-form model=field onSubmit=(action "save") as |form|}}
+  {{form.element controlType="text" label="Identificação:" property="label" placeholder="Texto usado apenas para identificação"}}
+  <div class="form-group">
+    <label>Descrição (texto que aparecerá no formulário):</label>
+    {{tinymce-editor
+      options=editorOptions
+      value=field.help
+    }}
+  </div>
+
+  {{#bs-button class="btn-sm" onClick=(action "deleteItem")}}Deletar{{/bs-button}}
+{{/bs-form}}
