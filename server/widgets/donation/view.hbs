@@ -1,0 +1,33 @@
+{{#ifCond widget.regionName "sidebar"}}
+  {{#if widget.ss.donationCustomText}}
+    <div>{{{widget.ss.donationCustomText}}}</div>
+  {{/if}}
+  {{#if widget.ss.donationPagseguroButton}}
+    <div class="donation-pagseguro-button">{{{widget.ss.donationPagseguroButton}}}</div>
+  {{/if}}
+  {{#if widget.ss.donationPaypalButton}}
+    <div class="donation-paypal-button">{{{widget.ss.donationPaypalButton}}}</div>
+  {{/if}}
+{{else}}
+<div class="container">
+  <div class="row">
+    {{#if widget.ss.donationCustomText}}
+      <div class="col-md-4">
+        <div class="donation-custom-text">{{{widget.ss.donationCustomText}}}</div>
+      </div>
+    {{/if}}
+    {{#if widget.ss.donationPagseguroButton}}
+      <div class="col-md-4">
+        <h5>Doações online pelo Pagseguro:</h5>
+        <div class="donation-pagseguro-button">{{{widget.ss.donationPagseguroButton}}}</div>
+      </div>
+    {{/if}}
+    {{#if widget.ss.donationPaypalButton}}
+      <div class="col-md-4">
+        <h5>Doações online pelo Paypal:</h5>
+        <div class="donation-paypal-button">{{{widget.ss.donationPaypalButton}}}</div>
+      </div>
+    {{/if}}
+  </div>
+</div>
+{{/ifCond}}

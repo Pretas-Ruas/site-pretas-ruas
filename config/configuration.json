@@ -31,6 +31,7 @@
         "create_contact_message",
         "find_group.post",
         "use_follow",
+        "find_d-form",
         "use_flag"
       ],
       "isSystemRole": true
@@ -51,6 +52,7 @@
         "find_vocabulary",
         "find_comment",
         "find_event",
+        "find_d-form",
         "find_news",
         "create_contact_message"
       ],
