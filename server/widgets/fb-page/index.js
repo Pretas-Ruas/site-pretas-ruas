@@ -20,7 +20,7 @@ module.exports = function fbPageWidget(projectPath, Widget) {
   //   next();
   // }
 
-  // // Widget view middleware, use for get data after render the widget html
+  // Widget view middleware, use for get data after render the widget html
   widget.viewMiddleware = function viewMiddleware(widget, req, res, next) {
 
     widget.fbPageId = req.we.systemSettings.fbPageId;

@@ -36,6 +36,11 @@ module.exports = function loadPlugin(projectPath, Plugin) {
       controller: 'theme',
       action: 'getAllThemes',
       responseType: 'json'
+    },
+    'post /newsletter/subscribe': {
+      controller: 'newsletter',
+      action: 'subscribe',
+      responseType: 'json'
     }
   });
 

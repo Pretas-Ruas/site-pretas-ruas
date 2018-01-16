@@ -1257,5 +1257,8 @@
   "widget.slideshow.description": "Widget/bloco com um slideshow",
   "event-structure.find": "Estrutura para eventos",
   "widget.donation.label": "Widget/bloco de doações",
-  "widget.donation.description": "Exibe as opções de doação configuradas no administrador do sistema"
+  "widget.donation.description": "Exibe as opções de doação configuradas no administrador do sistema",
+  "widget.mailchimp-subscription-form.label": "Lista de e-mails do Mailchimp",
+  "widget.mailchimp-subscription-form.description": "Widget/bloco para inscrição em uma lista de e-mails do Mailchimp",
+  "newsletter.subscription.success": "Inscrição realizada com sucesso"
 }
