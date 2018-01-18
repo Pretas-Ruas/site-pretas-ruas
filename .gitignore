@@ -56,3 +56,5 @@ package-lock.json
 
 db-settings-watch-file.txt
 files/sync-*
+
+exported-data

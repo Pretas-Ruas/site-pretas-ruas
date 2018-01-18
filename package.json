@@ -5,7 +5,7 @@
   "private": true,
   "main": "./app.js",
   "scripts": {
-    "session": "REDIS_URL=redis://127.0.0.1:5679/8 PORT=5600 node app.js --dev",
+    "session": "LOG_LV=verbose REDIS_URL=redis://127.0.0.1:5679/8 PORT=5600 node app.js --dev",
     "session-prod": "REDIS_URL=redis://127.0.0.1:5679/8 PORT=8190 node app.js --prod",
     "watch": "supervisor -w server,config,plugin.js app.js",
     "build": "gulp build",
@@ -30,6 +30,7 @@
     "redis": "^2.8.0",
     "request": "^2.83.0",
     "we": "^1.5.9",
+    "we-admin-ong": "linkysystems/ong-we-admin-ong",
     "we-core": "^1.12.16",
     "we-passport-oauth2-password": "^1.2.0",
     "we-plugin-acl": "^1.2.11",
@@ -49,6 +50,7 @@
     "we-plugin-google-analytics": "^1.2.0",
     "we-plugin-group": "^1.0.3",
     "we-plugin-i18n-api": "^1.0.0",
+    "we-plugin-mailchimp-sb": "^1.0.0",
     "we-plugin-menu": "^1.4.3",
     "we-plugin-news": "^1.0.0",
     "we-plugin-notification": "^1.1.1",
@@ -63,8 +65,7 @@
     "we-plugin-view": "^1.1.6",
     "we-plugin-vocabulary": "^1.2.7",
     "we-plugin-widget": "^1.1.7",
-    "we-plugin-mailchimp-sb": "^1.0.0",
-    "we-theme-pratt": "^1.0.6",
+    "we-theme-trident": "linkysystems/we-theme-trident#v1.0.1",
     "winston": "2.4.0"
   },
   "devDependencies": {
@@ -112,7 +113,8 @@
       "we-plugin-news": true,
       "we-plugin-d-form": true,
       "we-plugin-simple-event": true,
-      "we-plugin-mailchimp-sb": true
+      "we-plugin-mailchimp-sb": true,
+      "we-admin-ong": true
     },
     "devPlugins": {}
   }

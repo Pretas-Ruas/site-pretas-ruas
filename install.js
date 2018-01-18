@@ -229,7 +229,27 @@ module.exports = {
           })
           .then( (r)=> {
             we.log.info('New menu with name: '+r.name+' and id: '+r.id);
-            done();
+            // then create menu links
+            we.db.models.link.bulkCreate([
+              {
+                href: '#',
+                text: '<i class="fa fa-facebook"></i>',
+                title: 'Example',
+                menuId: r.id
+              },
+              {
+                href: '#',
+                text: '<i class="fa fa-twitter"></i>',
+                title: 'Example',
+                menuId: r.id
+              }
+            ])
+            .then( ()=> {
+              done();
+              return null;
+            })
+            .catch(done);
+
             return null;
           })
           .catch(done);
@@ -314,6 +334,12 @@ module.exports = {
       }, {
         key: 'googleMapsKey',
         value: 'AIzaSyDa_THpEmCgLPCOKDIj-q7IRTkyIku99TE',
+      }, {
+        key: 'emailContact',
+        value: `nao-responda <contato@hoteldomhenrique.com.br>`,
+      }, {
+        key: 'emailContact',
+        value: `nao-responda <contato@hoteldomhenrique.com.br>`,
       }, {
         key: 'emailContact',
         value: `nao-responda <contato@hoteldomhenrique.com.br>`,

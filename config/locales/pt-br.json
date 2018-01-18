@@ -1260,5 +1260,7 @@
   "widget.donation.description": "Exibe as opções de doação configuradas no administrador do sistema",
   "widget.mailchimp-subscription-form.label": "Lista de e-mails do Mailchimp",
   "widget.mailchimp-subscription-form.description": "Widget/bloco para inscrição em uma lista de e-mails do Mailchimp",
-  "newsletter.subscription.success": "Inscrição realizada com sucesso"
+  "newsletter.subscription.success": "Inscrição realizada com sucesso",
+  "widget.simple-event.label": "Próximos eventos",
+  "widget.simple-event.description": "Lista com os próximos eventos registrados no site"
 }
