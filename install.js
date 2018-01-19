@@ -337,12 +337,6 @@ module.exports = {
       }, {
         key: 'emailContact',
         value: `nao-responda <contato@hoteldomhenrique.com.br>`,
-      }, {
-        key: 'emailContact',
-        value: `nao-responda <contato@hoteldomhenrique.com.br>`,
-      }, {
-        key: 'emailContact',
-        value: `nao-responda <contato@hoteldomhenrique.com.br>`,
       }])
       .spread( ()=> {
         we.log.info('First system-setting created');
