@@ -58,3 +58,4 @@ db-settings-watch-file.txt
 files/sync-*
 
 exported-data
+install-local.js
