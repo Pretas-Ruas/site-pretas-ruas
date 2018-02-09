@@ -2325,6 +2325,10 @@ lodash@4.17.4, lodash@^4.14.0, lodash@^4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
+lodash@^4.17.5:
+  version "4.17.5"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
+
 lodash@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-1.0.2.tgz#8f57560c83b59fc270bd3d561b690043430e2551"
@@ -2508,9 +2512,9 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   dependencies:
     minimist "0.0.8"
 
-mocha@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/mocha/-/mocha-4.1.0.tgz#7d86cfbcf35cb829e2754c32e17355ec05338794"
+mocha@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/mocha/-/mocha-5.0.0.tgz#cccac988b0bc5477119cba0e43de7af6d6ad8f4e"
   dependencies:
     browser-stdout "1.3.0"
     commander "2.11.0"
@@ -2648,6 +2652,10 @@ node-pre-gyp@^0.6.39:
     semver "^5.3.0"
     tar "^2.2.1"
     tar-pack "^3.4.0"
+
+node-stream-zip@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/node-stream-zip/-/node-stream-zip-1.4.2.tgz#9631d25ad8b48103ba8d3e86ec12cadf8f406453"
 
 nodemailer-fetch@1.6.0:
   version "1.6.0"
@@ -3395,16 +3403,16 @@ simple-hooks-callback@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/simple-hooks-callback/-/simple-hooks-callback-1.0.0.tgz#810b93bee7ed046d0db313fc0008cf506fea1b02"
 
-sinon@^4.1.4:
-  version "4.1.5"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-4.1.5.tgz#620a9b2ac599f88b0455763070f16f4057ed6395"
+sinon@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-4.2.2.tgz#e039ab27bdb426fc61363c380726e996a2e2c620"
   dependencies:
     diff "^3.1.0"
     formatio "1.2.0"
     lodash.get "^4.4.2"
     lolex "^2.2.0"
     nise "^1.2.0"
-    supports-color "^4.4.0"
+    supports-color "^5.1.0"
     type-detect "^4.0.5"
 
 smtp-connection@2.12.0:
@@ -3693,7 +3701,7 @@ supports-color@^3.1.0:
   dependencies:
     has-flag "^1.0.0"
 
-supports-color@^4.0.0, supports-color@^4.4.0:
+supports-color@^4.0.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.5.0.tgz#be7a0de484dec5c5cddf8b3d59125044912f635b"
   dependencies:
@@ -4065,9 +4073,9 @@ we-core-acl@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/we-core-acl/-/we-core-acl-1.2.3.tgz#d5adcaba6beb093142a9409f054321031ff3a754"
 
-we-core@^1.12.16:
-  version "1.12.16"
-  resolved "https://registry.yarnpkg.com/we-core/-/we-core-1.12.16.tgz#69751ebae05086c6ced55a13f45454a2cf0cf9c0"
+we-core@^1.14.1:
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/we-core/-/we-core-1.14.1.tgz#ba426d820e7006f9be0afd48c507a23d6788d4a8"
   dependencies:
     async "2.5.0"
     body-parser "1.17.2"
@@ -4143,9 +4151,9 @@ we-plugin-d-form@wejs/we-plugin-d-form:
   version "1.0.0"
   resolved "https://codeload.github.com/wejs/we-plugin-d-form/tar.gz/45645f5037a9bf9518f3db073e56454217dce125"
 
-we-plugin-db-system-settings@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/we-plugin-db-system-settings/-/we-plugin-db-system-settings-1.1.4.tgz#fd1f3bc13ce0589fad2ce9c80a6cbc00fe33035e"
+we-plugin-db-system-settings@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/we-plugin-db-system-settings/-/we-plugin-db-system-settings-1.2.4.tgz#3ad1d305719601df07ccef24b8e7c01138d528a9"
   dependencies:
     chokidar "^1.7.0"
 
@@ -4187,9 +4195,9 @@ we-plugin-flag@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/we-plugin-flag/-/we-plugin-flag-1.1.1.tgz#c6e043b25e02ea270904cf0291ea95f670aad62e"
 
-we-plugin-form@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/we-plugin-form/-/we-plugin-form-1.3.0.tgz#4e9c84095c9c6dcdadbc96b4b9bb7b61b980965f"
+we-plugin-form@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/we-plugin-form/-/we-plugin-form-1.3.1.tgz#727e8d8c2fcb1415c43f17d13bfa1d1a9cdf6813"
 
 we-plugin-google-analytics@^1.2.0:
   version "1.2.0"
@@ -4213,9 +4221,9 @@ we-plugin-menu@^1.4.3:
   dependencies:
     chokidar "^1.7.0"
 
-we-plugin-news@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/we-plugin-news/-/we-plugin-news-1.0.0.tgz#15aa9809235a5b6ad16cc238ea984c64ea5e8a37"
+we-plugin-news@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/we-plugin-news/-/we-plugin-news-1.0.2.tgz#91473b4ad84ec72ae3d612d986b9428bc5b668b5"
 
 we-plugin-notification@^1.1.1:
   version "1.1.1"
@@ -4235,9 +4243,9 @@ we-plugin-simple-event@wejs/we-plugin-simple-event:
   version "1.0.0"
   resolved "https://codeload.github.com/wejs/we-plugin-simple-event/tar.gz/8ba0a13d776a9974f880b8dc3926acaf7580872b"
 
-we-plugin-site-contact@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/we-plugin-site-contact/-/we-plugin-site-contact-1.2.2.tgz#ae947d5a269aad425ac5994554f30a372c1bb611"
+we-plugin-site-contact@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/we-plugin-site-contact/-/we-plugin-site-contact-1.3.2.tgz#6f35066c62c9c3165911bbb765b1d47cd9ef3a9c"
   dependencies:
     fs-extra "^5.0.0"
 
@@ -4245,9 +4253,9 @@ we-plugin-slideshow@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/we-plugin-slideshow/-/we-plugin-slideshow-1.0.2.tgz#6b3ecf7ef44d7de2bb4bdf32a9310f7c6e175ac5"
 
-we-plugin-url-alias@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/we-plugin-url-alias/-/we-plugin-url-alias-1.1.2.tgz#2fce923eeb357aab1cf894444e08971932c95f5d"
+we-plugin-url-alias@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/we-plugin-url-alias/-/we-plugin-url-alias-1.1.3.tgz#80cf8be08c457f392d3cf0d7bf9780a7c5ee8d93"
 
 we-plugin-user-settings@^1.1.1:
   version "1.1.1"
@@ -4257,15 +4265,16 @@ we-plugin-user@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/we-plugin-user/-/we-plugin-user-1.1.8.tgz#7a74c9e3ea21740f6c01835c75ee85432b588c7b"
 
-we-plugin-view@^1.1.6:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/we-plugin-view/-/we-plugin-view-1.2.0.tgz#1b61470c9fedf77f2377ec52e380a4afa8b2a4ba"
+we-plugin-view@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/we-plugin-view/-/we-plugin-view-1.3.0.tgz#8a7696522231e6a93f19097fa279e5fc21645974"
   dependencies:
     hbs "4.0.1"
+    node-stream-zip "^1.4.2"
 
-we-plugin-vocabulary@^1.2.7:
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/we-plugin-vocabulary/-/we-plugin-vocabulary-1.2.7.tgz#ddf679ff4458af01bdb307cf08994a2f772f140f"
+we-plugin-vocabulary@^1.2.11:
+  version "1.2.11"
+  resolved "https://registry.yarnpkg.com/we-plugin-vocabulary/-/we-plugin-vocabulary-1.2.11.tgz#0a5b9fa510e8a054b148cd18b38c51ebe9af0711"
 
 we-plugin-widget@^1.1.7:
   version "1.1.7"
@@ -4281,9 +4290,9 @@ we-test-tools@^0.3.19:
     lodash "^4.17.4"
     supertest "^2.0.1"
 
-we-theme-trident@linkysystems/we-theme-trident#v1.0.0:
-  version "1.0.0"
-  resolved "https://codeload.github.com/linkysystems/we-theme-trident/tar.gz/05a9a09b5e23c7357fc7bb8feddc76f5829555ce"
+we-theme-trident@linkysystems/we-theme-trident#v1.0.1:
+  version "1.0.1"
+  resolved "https://codeload.github.com/linkysystems/we-theme-trident/tar.gz/738cbe7b3798d96cb17e6911fe43c55cb2f4afa7"
 
 we@^1.5.9:
   version "1.5.9"
