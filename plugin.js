@@ -32,11 +32,6 @@ module.exports = function loadPlugin(projectPath, Plugin) {
         return next();
       }
     },
-    'get /theme': {
-      controller: 'theme',
-      action: 'getAllThemes',
-      responseType: 'json'
-    },
     'post /newsletter/subscribe': {
       controller: 'newsletter',
       action: 'subscribe',

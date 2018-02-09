@@ -2800,10 +2800,6 @@ once@~1.3.0:
   dependencies:
     wrappy "1"
 
-one-page-new-age@linkysystems/hotelinky-theme-one-page-new-age:
-  version "1.0.13"
-  resolved "https://codeload.github.com/linkysystems/hotelinky-theme-one-page-new-age/tar.gz/c0cefcce00fe21315fb04068ca363eef7c1776f3"
-
 open@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/open/-/open-0.0.5.tgz#42c3e18ec95466b6bf0dc42f3a2945c3f0cad8fc"
@@ -4065,9 +4061,9 @@ watchr@~2.4.13:
     taskgroup "^4.2.0"
     typechecker "^2.0.8"
 
-we-admin-ong@linkysystems/ong-we-admin-ong:
-  version "1.2.0"
-  resolved "https://codeload.github.com/linkysystems/ong-we-admin-ong/tar.gz/b57446a7fb82f057f99703ea7af5a27f4012599d"
+we-admin-ong@linkysystems/ong-we-admin-ong#v1.2.1:
+  version "1.2.1"
+  resolved "https://codeload.github.com/linkysystems/ong-we-admin-ong/tar.gz/997757e63484627d9c4903a8860229a65bf6052a"
 
 we-core-acl@^1.2.3:
   version "1.2.3"
@@ -4151,9 +4147,9 @@ we-plugin-d-form@wejs/we-plugin-d-form:
   version "1.0.0"
   resolved "https://codeload.github.com/wejs/we-plugin-d-form/tar.gz/45645f5037a9bf9518f3db073e56454217dce125"
 
-we-plugin-db-system-settings@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/we-plugin-db-system-settings/-/we-plugin-db-system-settings-1.2.4.tgz#3ad1d305719601df07ccef24b8e7c01138d528a9"
+we-plugin-db-system-settings@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/we-plugin-db-system-settings/-/we-plugin-db-system-settings-1.2.5.tgz#88140e393178aea50b64893264e280d240e07c5f"
   dependencies:
     chokidar "^1.7.0"
 
@@ -4289,10 +4285,6 @@ we-test-tools@^0.3.19:
     fs-extra "^1.0.0"
     lodash "^4.17.4"
     supertest "^2.0.1"
-
-we-theme-trident@linkysystems/we-theme-trident#v1.0.1:
-  version "1.0.1"
-  resolved "https://codeload.github.com/linkysystems/we-theme-trident/tar.gz/738cbe7b3798d96cb17e6911fe43c55cb2f4afa7"
 
 we@^1.5.9:
   version "1.5.9"
