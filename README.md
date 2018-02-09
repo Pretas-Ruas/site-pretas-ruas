@@ -1,9 +1,8 @@
-# We.js ONG site solution
+# We.js 3sector colaborative portal solution
 
-**Build With:**
+## Build With:
 
 - We.js
-
 
 ## How to install
 
