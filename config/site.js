@@ -3,6 +3,7 @@ module.exports = {
   isONG: true,
   appName: 'Site',
   subtitle: 'Nome do site',
+  systemSettingsPubSubStrategy: 'redis',
 
   // default favicon, change in your project config/local.js
   // favicon: path.resolve(__dirname, '..', 'files/public/favicon.png'),
