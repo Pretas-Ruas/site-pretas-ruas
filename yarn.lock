@@ -9,6 +9,12 @@
     normalize-path "^2.0.1"
     through2 "^2.0.3"
 
+"@sinonjs/formatio@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@sinonjs/formatio/-/formatio-2.0.0.tgz#84db7e9eb5531df18a8c5e0bfb6e449e55e654b2"
+  dependencies:
+    samsam "1.3.0"
+
 "@types/geojson@^1.0.0":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-1.0.6.tgz#3e02972728c69248c2af08d60a48cbb8680fffdf"
@@ -1291,7 +1297,7 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
-formatio@1.2.0, formatio@^1.2.0:
+formatio@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/formatio/-/formatio-1.2.0.tgz#f3b2167d9068c4698a8d51f4f760a39a54d818eb"
   dependencies:
@@ -2512,9 +2518,9 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   dependencies:
     minimist "0.0.8"
 
-mocha@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/mocha/-/mocha-5.0.0.tgz#cccac988b0bc5477119cba0e43de7af6d6ad8f4e"
+mocha@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/mocha/-/mocha-5.0.1.tgz#759b62c836b0732382a62b6b1fb245ec1bc943ac"
   dependencies:
     browser-stdout "1.3.0"
     commander "2.11.0"
@@ -3252,7 +3258,7 @@ safefs@^3.1.2:
   dependencies:
     graceful-fs "*"
 
-samsam@1.x:
+samsam@1.3.0, samsam@1.x:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/samsam/-/samsam-1.3.0.tgz#8d1d9350e25622da30de3e44ba692b5221ab7c50"
 
@@ -3399,12 +3405,12 @@ simple-hooks-callback@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/simple-hooks-callback/-/simple-hooks-callback-1.0.0.tgz#810b93bee7ed046d0db313fc0008cf506fea1b02"
 
-sinon@^4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-4.2.2.tgz#e039ab27bdb426fc61363c380726e996a2e2c620"
+sinon@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-4.3.0.tgz#cec9b27d5f4e2c63c1a79c9dc1c05d34bb088234"
   dependencies:
+    "@sinonjs/formatio" "^2.0.0"
     diff "^3.1.0"
-    formatio "1.2.0"
     lodash.get "^4.4.2"
     lolex "^2.2.0"
     nise "^1.2.0"
@@ -4061,9 +4067,9 @@ watchr@~2.4.13:
     taskgroup "^4.2.0"
     typechecker "^2.0.8"
 
-we-admin-ong@linkysystems/ong-we-admin-ong#v1.2.1:
-  version "1.2.1"
-  resolved "https://codeload.github.com/linkysystems/ong-we-admin-ong/tar.gz/997757e63484627d9c4903a8860229a65bf6052a"
+we-admin-ong@linkysystems/ong-we-admin-ong#v1.2.2:
+  version "1.2.2"
+  resolved "https://codeload.github.com/linkysystems/ong-we-admin-ong/tar.gz/af206047ed9546ab8e689505294709f0ec483f9a"
 
 we-core-acl@^1.2.3:
   version "1.2.3"
@@ -4147,9 +4153,9 @@ we-plugin-d-form@wejs/we-plugin-d-form:
   version "1.0.0"
   resolved "https://codeload.github.com/wejs/we-plugin-d-form/tar.gz/45645f5037a9bf9518f3db073e56454217dce125"
 
-we-plugin-db-system-settings@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/we-plugin-db-system-settings/-/we-plugin-db-system-settings-1.2.5.tgz#88140e393178aea50b64893264e280d240e07c5f"
+we-plugin-db-system-settings@^1.2.7:
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/we-plugin-db-system-settings/-/we-plugin-db-system-settings-1.2.7.tgz#3875411e4cdd5ac98e91c668072333fa1ba3208f"
   dependencies:
     chokidar "^1.7.0"
 
@@ -4261,12 +4267,13 @@ we-plugin-user@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/we-plugin-user/-/we-plugin-user-1.1.8.tgz#7a74c9e3ea21740f6c01835c75ee85432b588c7b"
 
-we-plugin-view@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/we-plugin-view/-/we-plugin-view-1.3.0.tgz#8a7696522231e6a93f19097fa279e5fc21645974"
+we-plugin-view@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/we-plugin-view/-/we-plugin-view-1.3.1.tgz#e2f44f2052eabfd9fefb7806a04e83fe6474c850"
   dependencies:
     hbs "4.0.1"
     node-stream-zip "^1.4.2"
+    request "^2.83.0"
 
 we-plugin-vocabulary@^1.2.11:
   version "1.2.11"
