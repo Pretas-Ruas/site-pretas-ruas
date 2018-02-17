@@ -1262,5 +1262,8 @@
   "widget.mailchimp-subscription-form.description": "Widget/bloco para inscrição em uma lista de e-mails do Mailchimp",
   "newsletter.subscription.success": "Inscrição realizada com sucesso",
   "widget.simple-event.label": "Próximos eventos",
-  "widget.simple-event.description": "Lista com os próximos eventos registrados no site"
+  "widget.simple-event.description": "Lista com os próximos eventos registrados no site",
+  "simple-event.find": "Eventos",
+  "simple-event.create": "Adicionar evento",
+  "user.post.find": "Postagens"
 }
