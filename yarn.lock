@@ -4067,9 +4067,9 @@ watchr@~2.4.13:
     taskgroup "^4.2.0"
     typechecker "^2.0.8"
 
-we-admin-ong@linkysystems/ong-we-admin-ong#v1.2.2:
-  version "1.2.2"
-  resolved "https://codeload.github.com/linkysystems/ong-we-admin-ong/tar.gz/af206047ed9546ab8e689505294709f0ec483f9a"
+we-admin-ong@linkysystems/ong-we-admin-ong#v1.2.5:
+  version "1.2.5"
+  resolved "https://codeload.github.com/linkysystems/ong-we-admin-ong/tar.gz/3897cdb7841176f2f0c73c88be35fe8db75d789c"
 
 we-core-acl@^1.2.3:
   version "1.2.3"
@@ -4153,9 +4153,9 @@ we-plugin-d-form@wejs/we-plugin-d-form:
   version "1.0.0"
   resolved "https://codeload.github.com/wejs/we-plugin-d-form/tar.gz/45645f5037a9bf9518f3db073e56454217dce125"
 
-we-plugin-db-system-settings@^1.2.7:
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/we-plugin-db-system-settings/-/we-plugin-db-system-settings-1.2.7.tgz#3875411e4cdd5ac98e91c668072333fa1ba3208f"
+we-plugin-db-system-settings@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/we-plugin-db-system-settings/-/we-plugin-db-system-settings-1.3.1.tgz#3d2c8492f2b650a67bab8f2db6d4e80701468e4b"
   dependencies:
     chokidar "^1.7.0"
 
@@ -4267,9 +4267,9 @@ we-plugin-user@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/we-plugin-user/-/we-plugin-user-1.1.8.tgz#7a74c9e3ea21740f6c01835c75ee85432b588c7b"
 
-we-plugin-view@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/we-plugin-view/-/we-plugin-view-1.3.1.tgz#e2f44f2052eabfd9fefb7806a04e83fe6474c850"
+we-plugin-view@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/we-plugin-view/-/we-plugin-view-1.4.0.tgz#5aa5e05187f818c08f5a3774c27ebf471c647421"
   dependencies:
     hbs "4.0.1"
     node-stream-zip "^1.4.2"
