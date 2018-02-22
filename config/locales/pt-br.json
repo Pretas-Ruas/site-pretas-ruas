@@ -1265,5 +1265,6 @@
   "widget.simple-event.description": "Lista com os próximos eventos registrados no site",
   "simple-event.find": "Eventos",
   "simple-event.create": "Adicionar evento",
-  "user.post.find": "Postagens"
+  "user.post.find": "Postagens",
+  "municipio.find": "Municípios Conveniados"
 }
