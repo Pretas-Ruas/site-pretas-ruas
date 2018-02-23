@@ -32,7 +32,8 @@
         "find_group.post",
         "use_follow",
         "find_d-form",
-        "use_flag"
+        "use_flag",
+        "find_municipio"
       ],
       "isSystemRole": true
     },
@@ -54,7 +55,8 @@
         "find_event",
         "find_d-form",
         "find_news",
-        "create_contact_message"
+        "create_contact_message",
+        "find_municipio"
       ],
       "isSystemRole": true
     },
