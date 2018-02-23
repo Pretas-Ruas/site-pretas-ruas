@@ -4067,17 +4067,17 @@ watchr@~2.4.13:
     taskgroup "^4.2.0"
     typechecker "^2.0.8"
 
-we-admin-ong@linkysystems/ong-we-admin-ong#v1.2.5:
-  version "1.2.5"
-  resolved "https://codeload.github.com/linkysystems/ong-we-admin-ong/tar.gz/3897cdb7841176f2f0c73c88be35fe8db75d789c"
+we-admin-ong@linkysystems/we-admin-ong#v1.2.8:
+  version "1.2.8"
+  resolved "https://codeload.github.com/linkysystems/we-admin-ong/tar.gz/7d62f75d1c308651331b43350b784c3f0f758cf9"
 
 we-core-acl@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/we-core-acl/-/we-core-acl-1.2.3.tgz#d5adcaba6beb093142a9409f054321031ff3a754"
 
-we-core@^1.14.1:
-  version "1.14.1"
-  resolved "https://registry.yarnpkg.com/we-core/-/we-core-1.14.1.tgz#ba426d820e7006f9be0afd48c507a23d6788d4a8"
+we-core@^1.14.2:
+  version "1.14.2"
+  resolved "https://registry.yarnpkg.com/we-core/-/we-core-1.14.2.tgz#b41e703e78d4c17eea49bba70a66cff63e58a2bf"
   dependencies:
     async "2.5.0"
     body-parser "1.17.2"
@@ -4205,9 +4205,9 @@ we-plugin-google-analytics@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/we-plugin-google-analytics/-/we-plugin-google-analytics-1.2.0.tgz#8f65cc576e577b54b7b5c65be9a3552dbcca0ca7"
 
-we-plugin-group@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/we-plugin-group/-/we-plugin-group-1.0.3.tgz#5c0c0e301e6d55ff807bf353bf1cba5d96d73c59"
+we-plugin-group@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/we-plugin-group/-/we-plugin-group-1.0.5.tgz#b1adb85a6c82e2199c2adc292f75e380fda2334c"
 
 we-plugin-i18n-api@^1.0.0:
   version "1.0.0"
@@ -4231,9 +4231,9 @@ we-plugin-notification@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/we-plugin-notification/-/we-plugin-notification-1.1.1.tgz#c9810ba094e5eabc07bbef24a043dddc08030f14"
 
-we-plugin-passport-facebook@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/we-plugin-passport-facebook/-/we-plugin-passport-facebook-1.1.2.tgz#8da6946a29aff23ff6120435be34c153c8f9550e"
+we-plugin-passport-facebook@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/we-plugin-passport-facebook/-/we-plugin-passport-facebook-1.2.0.tgz#b3d1553bd553a7c9823dff703076070c93d0bb67"
   dependencies:
     passport-facebook "^2.1.0"
 
@@ -4267,9 +4267,9 @@ we-plugin-user@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/we-plugin-user/-/we-plugin-user-1.1.8.tgz#7a74c9e3ea21740f6c01835c75ee85432b588c7b"
 
-we-plugin-view@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/we-plugin-view/-/we-plugin-view-1.4.0.tgz#5aa5e05187f818c08f5a3774c27ebf471c647421"
+we-plugin-view@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/we-plugin-view/-/we-plugin-view-1.4.3.tgz#c7097115f8044aa194b514b09501a633d80e570f"
   dependencies:
     hbs "4.0.1"
     node-stream-zip "^1.4.2"
