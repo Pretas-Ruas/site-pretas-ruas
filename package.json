@@ -30,7 +30,7 @@
     "request": "^2.83.0",
     "we": "^1.5.9",
     "we-admin-ong": "linkysystems/we-admin-ong#v1.2.8",
-    "we-core": "^1.14.1",
+    "we-core": "^1.14.2",
     "we-passport-oauth2-password": "^1.2.0",
     "we-plugin-acl": "^1.2.11",
     "we-plugin-auth": "^1.3.1",
