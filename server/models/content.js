@@ -4,8 +4,7 @@
 
 module.exports = function contentModel(we) {
   const model = {
-    // define you model here
-    // see http://docs.sequelizejs.com/en/latest/docs/models-definition
+
     definition: {
       active: {
         type: we.db.Sequelize.BOOLEAN,
@@ -64,8 +63,7 @@ module.exports = function contentModel(we) {
         }
       }
     },
-    // Associations
-    // see http://docs.sequelizejs.com/en/latest/docs/associations
+
     associations: {
       creator: {
         type: 'belongsTo',
