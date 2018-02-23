@@ -36,6 +36,13 @@ module.exports = function loadPlugin(projectPath, Plugin) {
       controller: 'newsletter',
       action: 'subscribe',
       responseType: 'json'
+    },
+
+    'get /terms-of-use': {
+      controller: 'main',
+      template: 'terms-of-use',
+      action: 'termsOfUse',
+      permission: true
     }
   });
 
