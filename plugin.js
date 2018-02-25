@@ -129,7 +129,6 @@ module.exports = function loadPlugin(projectPath, Plugin) {
   });
 
   plugin.iframeClassMD = function iframeClassMD(req, res, next) {
-
     if (req.query.iframe) {
       res.locals.iframeClass = 'iframe-page-type';
     } else {

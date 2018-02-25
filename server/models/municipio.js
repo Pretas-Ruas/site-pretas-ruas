@@ -101,20 +101,15 @@ module.exports = function hotelRoomModel(we) {
       },
       // record method for use with record.[method]
       instanceMethods: {},
-      // Sequelize hooks
-      // See http://docs.sequelizejs.com/en/latest/api/hooks
       hooks: {
-        beforeCreate(r, opts, done) {
+        beforeCreate(r) {
           // create an published content and set its publishedDate:
           if (r.published) {
             r.publishedAt = Date.now();
           }
-
-          done();
-          return r;
         },
 
-        beforeUpdate(r, opts, done) {
+        beforeUpdate(r) {
           if (r.published && !r.publishedAt) {
             // set publishedAt on publish:
             r.publishedAt = Date.now();
@@ -122,9 +117,6 @@ module.exports = function hotelRoomModel(we) {
             // reset publishedAt on unpublish
             r.publishedAt = null;
           }
-
-          done();
-          return r;
         }
       }
     }

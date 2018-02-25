@@ -240,7 +240,7 @@ module.exports = function UserModel(we) {
         }
       },
       hooks: {
-        beforeValidate(user, options, next) {
+        beforeValidate(user) {
           user.username = user.email;
 
           if (user.isNewRecord) {
@@ -248,10 +248,9 @@ module.exports = function UserModel(we) {
             user.dataValues.password = null;
             user.dataValues.passwordId = null;
           }
-          next(null, user);
         },
         // Lifecycle Callbacks
-        beforeCreate(user, options, next) {
+        beforeCreate(user) {
           user.username = user.email;
 
           // set default displayName as username
@@ -268,9 +267,8 @@ module.exports = function UserModel(we) {
           // dont allow to set admin and moderator flags
           delete user.isAdmin;
           delete user.isModerator;
-          next(null, user);
         },
-        beforeUpdate(user, options, next) {
+        beforeUpdate(user) {
           user.username = user.email;
 
           // set default displayName as username
@@ -284,20 +282,27 @@ module.exports = function UserModel(we) {
 
           // dont change user acceptTerms in update
           user.acceptTerms = true;
-          return next(null, user);
         },
 
-        afterFind(record, options, next) {
-          if (!record) return next();
+        afterFind(record) {
+          return new Promise( (resolve, reject)=> {
+            if (!record) return resolve();
 
-          // load privacity to hide user fields in toJSON
-          if (we.utils._.isArray(record)) {
-            we.utils.async.eachSeries(record, (r, next)=> {
-              we.db.models.user.loadPrivacity(r, next);
-            }, next);
-          } else {
-            we.db.models.user.loadPrivacity(record, next);
-          }
+            // load privacity to hide user fields in toJSON
+            if (we.utils._.isArray(record)) {
+              we.utils.async.eachSeries(record, (r, next)=> {
+                we.db.models.user.loadPrivacity(r, next);
+              }, (err)=> {
+                if (err) return reject(err);
+                resolve();
+              });
+            } else {
+              we.db.models.user.loadPrivacity(record, (err)=> {
+                if (err) return reject(err);
+                resolve();
+              });
+            }
+          });
         }
       }
     }

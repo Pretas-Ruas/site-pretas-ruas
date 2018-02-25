@@ -10,6 +10,8 @@ module.exports = {
       res.locals.query.where.published = true;
     }
 
+    const Op = req.we.Op;
+
     res.locals.query.order = [
       ['highlighted', 'DESC'],
       ['createdAt', 'DESC'],
@@ -18,12 +20,12 @@ module.exports = {
     ];
 
     if (req.query.q) {
-      res.locals.query.where.$or = {
+      res.locals.query.where[Op.or] = {
         title: {
-          $like: '%'+req.query.q+'%'
+          [Op.like]: '%'+req.query.q+'%'
         },
         body: {
-          $like: '%'+req.query.q+'%'
+          [Op.like]: '%'+req.query.q+'%'
         }
       };
     }

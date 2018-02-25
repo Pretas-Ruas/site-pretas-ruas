@@ -4,6 +4,8 @@ module.exports = {
       res.locals.query.where.published = true;
     }
 
+    const Op = req.we.Op;
+
     // default sort:
     if (!req.query.sort) {
       res.locals.query.order = [
@@ -16,12 +18,12 @@ module.exports = {
 
 
     if (req.query.q) {
-      res.locals.query.where.$or = {
+      res.locals.query.where[Op.or] = {
         name: {
-          $like: '%'+req.query.q+'%'
+          [Op.like]: '%'+req.query.q+'%'
         },
         body: {
-          $like: '%'+req.query.q+'%'
+          [Op.like]: '%'+req.query.q+'%'
         }
       };
     }

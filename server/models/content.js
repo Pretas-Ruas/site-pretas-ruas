@@ -128,10 +128,8 @@ module.exports = function contentModel(we) {
       },
       // record method for use with record.[method]
       instanceMethods: {},
-      // Sequelize hooks
-      // See http://docs.sequelizejs.com/en/latest/api/hooks
       hooks: {
-        beforeCreate(r, opts, done) {
+        beforeCreate(r) {
           // create an published content and set its publishedDate:
           if (r.published) {
             r.publishedAt = Date.now();
@@ -140,12 +138,9 @@ module.exports = function contentModel(we) {
           if (!r.highlighted) {
             r.highlighted = 0;
           }
-
-          done();
-          return r;
         },
 
-        beforeUpdate(r, opts, done) {
+        beforeUpdate(r) {
           if (r.published && !r.publishedAt) {
             // set publishedAt on publish:
             r.publishedAt = Date.now();
@@ -157,11 +152,7 @@ module.exports = function contentModel(we) {
           if (!r.highlighted) {
             r.highlighted = 0;
           }
-
-          done();
-          return r;
         }
-
       }
     }
   };

@@ -23,6 +23,7 @@ module.exports = function (projectPath, Widget) {
   // // Widget view middleware, use for get data after render the widget html
   widget.viewMiddleware = function viewMiddleware(widget, req, res, next) {
     const we = req.we;
+    const Op = we.Op;
 
     if (res.locals.model === 'user' && res.locals.data && res.locals.data.id) {
       widget.user = res.locals.data;
@@ -31,9 +32,9 @@ module.exports = function (projectPath, Widget) {
       .membership
       .findAll({
         where: {
-          $and: [
+          [Op.and]: [
             { userId: res.locals.data.id },
-            { groupId: { $ne: null } }
+            { groupId: { [Op.ne]: null } }
           ]
         },
         order: [
@@ -55,7 +56,7 @@ module.exports = function (projectPath, Widget) {
         return we.db.models.group
         .findAll({
           where: {
-            id: { $in: groupIds }
+            id: { [Op.in]: groupIds }
           }
         })
         .then( (groups)=> {
