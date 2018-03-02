@@ -111,7 +111,14 @@ module.exports = function UserModel(we) {
         formFieldType: null
       }
     },
-    associations: {},
+    associations: {
+      municipiosEditorIn: {
+        type: 'belongsToMany',
+        model: 'municipio',
+        through: 'municipiosEditors',
+        inverse: 'editors'
+      }
+    },
     options: {
       enableAlias: false,
       titleField: 'displayName',
@@ -241,7 +248,7 @@ module.exports = function UserModel(we) {
       },
       hooks: {
         beforeValidate(user) {
-          user.username = user.email;
+          user.username = user.id;
 
           if (user.isNewRecord) {
             // dont set password on create
@@ -251,7 +258,7 @@ module.exports = function UserModel(we) {
         },
         // Lifecycle Callbacks
         beforeCreate(user) {
-          user.username = user.email;
+          user.username = user.id;
 
           // set default displayName as username
           if (!user.displayName) {
@@ -269,7 +276,7 @@ module.exports = function UserModel(we) {
           delete user.isModerator;
         },
         beforeUpdate(user) {
-          user.username = user.email;
+          user.username = user.id;
 
           // set default displayName as username
           if (!user.displayName) {

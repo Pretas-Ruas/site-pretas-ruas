@@ -4,8 +4,6 @@
 
 module.exports = function hotelRoomModel(we) {
   const model = {
-    // define you model here
-    // see http://docs.sequelizejs.com/en/latest/docs/models-definition
     definition: {
       published: {
         type: we.db.Sequelize.BOOLEAN,
@@ -38,8 +36,6 @@ module.exports = function hotelRoomModel(we) {
         allowNull: true
       }
     },
-    // Associations
-    // see http://docs.sequelizejs.com/en/latest/docs/associations
     associations: {
       creator: {
         type: 'belongsTo',
@@ -61,6 +57,12 @@ module.exports = function hotelRoomModel(we) {
         // otherKey: 'termId',
         //type: 'hasMay',
         model: 'term'
+      },
+      editors: {
+        type: 'belongsToMany',
+        model: 'user',
+        through: 'municipiosEditors',
+        inverse: 'municipiosEditorIn'
       }
     },
     options: {
@@ -96,6 +98,45 @@ module.exports = function hotelRoomModel(we) {
               .slugify().s,
             target: '/municipio/' + record.id,
           };
+        },
+        /**
+         * Context loader, preload current request record and related data
+         *
+         * @param  {Object}   req  express.js request
+         * @param  {Object}   res  express.js response
+         * @param  {Function} done callback
+         */
+        contextLoader(req, res, done) {
+          if (!res.locals.id || !res.locals.loadCurrentRecord) return done();
+
+          return this.findOne({
+            where: { id: res.locals.id },
+            include: [{ all: true }]
+          })
+          .then(function afterLoadContextRecord (record) {
+            res.locals.data = record;
+
+            if (record && record.dataValues.creatorId && req.isAuthenticated()) {
+              // ser role owner
+              if (record.isOwner(req.user.id)) {
+                if(req.userRoleNames.indexOf('owner') == -1 ) req.userRoleNames.push('owner');
+              }
+            }
+
+            if (record.editors && req.isAuthenticated()) {
+              const ed = record.editors;
+              for (let i = ed.length - 1; i >= 0; i--) {
+                if (ed[i].id == req.user.id) {
+                  req.userRoleNames.push('owner');
+                  break;
+                }
+              }
+            }
+
+            done();
+            return null;
+          })
+          .catch(done);
         }
 
       },

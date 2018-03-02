@@ -18,7 +18,11 @@ module.exports = function loadPlugin(projectPath, Plugin) {
     permissions: {
       'access_contents_unpublished': {
         'title': 'Access unpublished contents'
-      }
+      },
+      'view_dashboard': { title: '' },
+      'edit_terms_of_use': { title: '' },
+      'manage_municipio': { title: '' },
+      'access_municipio_unPublished': { title: '' }
     }
   });
 
@@ -107,6 +111,7 @@ module.exports = function loadPlugin(projectPath, Plugin) {
     }
 
     for (let permission in plugin.we.acl.permissions) {
+
       if (plugin.we.acl.canStatic(permission, ctx.req.userRoleNames)) {
         ctx.data.userPermissions[permission] = true;
       }

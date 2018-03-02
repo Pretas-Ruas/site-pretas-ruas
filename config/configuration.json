@@ -33,7 +33,10 @@
         "use_follow",
         "find_d-form",
         "use_flag",
-        "find_municipio"
+        "find_municipio",
+        "view_dashboard",
+        "find_url-alia",
+        "find_simple-event"
       ],
       "isSystemRole": true
     },
@@ -56,7 +59,10 @@
         "find_d-form",
         "find_news",
         "create_contact_message",
-        "find_municipio"
+        "find_municipio",
+        "view_dashboard",
+        "find_url-alia",
+        "find_simple-event"
       ],
       "isSystemRole": true
     },
@@ -67,7 +73,8 @@
         "update_post",
         "delete_comment",
         "delete_post",
-        "update_user"
+        "update_user",
+        "update_municipio"
       ],
       "isSystemRole": true
     },
@@ -138,7 +145,28 @@
         "delete_term",
         "find_url-alia",
         "create_url-alia",
-        "update_url-alia"
+        "update_url-alia",
+        "update_municipio",
+        "create_municipio",
+        "delete_municipio",
+        "manage_municipio",
+        "access_municipio_unPublished",
+        "create_simple-event",
+        "update_simple-event",
+        "create_slide",
+        "update_slide",
+        "update_vocabulary",
+        "update_term",
+        "update_email-template"
+      ]
+    },
+    "tourismManager": {
+      "name": "Gestor de turismo",
+      "canAddInUsers": true,
+      "isSystemRole": false,
+      "permissions": [
+        "access_municipio_unPublished",
+        "update_municipio"
       ]
     }
   }

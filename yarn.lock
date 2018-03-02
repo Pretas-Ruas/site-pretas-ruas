@@ -1512,7 +1512,7 @@ glogg@^1.0.0:
   dependencies:
     sparkles "^1.0.0"
 
-gm@^1.23.0, gm@^1.23.1:
+gm@^1.23.1:
   version "1.23.1"
   resolved "https://registry.yarnpkg.com/gm/-/gm-1.23.1.tgz#2edeeb958084d0f8ea7988e5d995b1c7dfc14777"
   dependencies:
@@ -3445,9 +3445,9 @@ simple-hooks-callback@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/simple-hooks-callback/-/simple-hooks-callback-1.0.0.tgz#810b93bee7ed046d0db313fc0008cf506fea1b02"
 
-sinon@^4.4.1:
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-4.4.1.tgz#68819f18be164078d03d4fc40ce0691d1f666eb5"
+sinon@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-4.4.2.tgz#c4c41d4bd346e1d33594daec2d5df0548334fc65"
   dependencies:
     "@sinonjs/formatio" "^2.0.0"
     diff "^3.1.0"
@@ -4160,9 +4160,9 @@ we-passport-oauth2-password@^2.0.0:
   dependencies:
     uuid "^3.1.0"
 
-we-plugin-acl@^1.2.11:
-  version "1.2.11"
-  resolved "https://registry.yarnpkg.com/we-plugin-acl/-/we-plugin-acl-1.2.11.tgz#c605bb97e0791df3a7884894111122c38d16d667"
+we-plugin-acl@^1.2.12:
+  version "1.2.12"
+  resolved "https://registry.yarnpkg.com/we-plugin-acl/-/we-plugin-acl-1.2.12.tgz#ccb44bf19664c02f8efe9e4cfd3cf9dacdd92780"
   dependencies:
     we-core-acl "^1.2.3"
 
@@ -4217,13 +4217,13 @@ we-plugin-field-phone@^1.1.0:
   dependencies:
     phone "^1.0.5"
 
-we-plugin-file-local@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/we-plugin-file-local/-/we-plugin-file-local-1.2.0.tgz#040cbd4aa33fafe844082523c6ad7bf8c989f02e"
+we-plugin-file-local@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/we-plugin-file-local/-/we-plugin-file-local-2.0.0.tgz#068849389a1af458cda9f1405a5ab1b9dc891608"
   dependencies:
-    gm "^1.23.0"
+    gm "^1.23.1"
     mkdirp "^0.5.1"
-    uuid "^3.1.0"
+    uuid "^3.2.1"
 
 we-plugin-file@^2.0.0:
   version "2.0.0"
@@ -4257,15 +4257,15 @@ we-plugin-mailchimp-sb@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/we-plugin-mailchimp-sb/-/we-plugin-mailchimp-sb-1.0.0.tgz#4bd27093670b8118909a1fd226d40c262b1eb8d0"
 
-we-plugin-menu@^1.4.3:
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/we-plugin-menu/-/we-plugin-menu-1.4.3.tgz#712279f8c58ae4db1d7fb19e09b1658f38b29c4d"
+we-plugin-menu@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/we-plugin-menu/-/we-plugin-menu-2.0.0.tgz#ca625046cbc79ebc22c4c7f988676197d18672a7"
   dependencies:
     chokidar "^1.7.0"
 
-we-plugin-news@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/we-plugin-news/-/we-plugin-news-2.0.0.tgz#535eef85c1aa45b477d200b4e13e11c87d0bace9"
+we-plugin-news@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/we-plugin-news/-/we-plugin-news-2.0.2.tgz#6609593f5d5deec683437b5a4b781b1bdc4a2beb"
 
 we-plugin-notification@^1.1.1:
   version "1.1.1"
@@ -4277,13 +4277,15 @@ we-plugin-passport-facebook@^1.2.0:
   dependencies:
     passport-facebook "^2.1.0"
 
-we-plugin-search@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/we-plugin-search/-/we-plugin-search-2.0.0.tgz#b50e6a0fdc2bfd1fc63cfc4adc2d464978fb5b22"
+we-plugin-search@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/we-plugin-search/-/we-plugin-search-2.0.1.tgz#6b07972c325ce178a431fadcb07faaeea14a80fb"
 
-we-plugin-simple-event@wejs/we-plugin-simple-event:
-  version "1.0.0"
-  resolved "https://codeload.github.com/wejs/we-plugin-simple-event/tar.gz/8ba0a13d776a9974f880b8dc3926acaf7580872b"
+we-plugin-simple-event@^2:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/we-plugin-simple-event/-/we-plugin-simple-event-2.0.0.tgz#1f64ba422bf18daa709b888cb96a8aa8153150e1"
+  dependencies:
+    mysql2 "^1.5.2"
 
 we-plugin-site-contact@^2.0.0:
   version "2.0.0"
@@ -4307,9 +4309,9 @@ we-plugin-user@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/we-plugin-user/-/we-plugin-user-2.0.0.tgz#5e882d5e70aaacd4fc0dc1a7c78f65fad734fcad"
 
-we-plugin-view@^1.4.3:
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/we-plugin-view/-/we-plugin-view-1.4.3.tgz#c7097115f8044aa194b514b09501a633d80e570f"
+we-plugin-view@^1.4.4:
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/we-plugin-view/-/we-plugin-view-1.4.4.tgz#8ec25988a61f9cfbd40c179dfd6f4db3e5bc86b5"
   dependencies:
     hbs "4.0.1"
     node-stream-zip "^1.4.2"
