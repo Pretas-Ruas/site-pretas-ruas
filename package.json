@@ -52,7 +52,7 @@
     "we-plugin-mailchimp-sb": "^1.0.0",
     "we-plugin-menu": "^2.0.0",
     "we-plugin-news": "^2.0.2",
-    "we-plugin-notification": "^2.0.0",
+    "we-plugin-notification": "^2.0.1",
     "we-plugin-passport-facebook": "^1.2.0",
     "we-plugin-search": "^2.0.1",
     "we-plugin-simple-event": "^2",
