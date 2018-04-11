@@ -33,7 +33,7 @@
     "we-core": "^2.0.1",
     "we-passport-oauth2-password": "^2.0.0",
     "we-plugin-acl": "^1.2.12",
-    "we-plugin-auth": "^2.1.0",
+    "we-plugin-auth": "^2.1.1",
     "we-plugin-comment": "^2.0.0",
     "we-plugin-contact": "^2.0.0",
     "we-plugin-csv": "^1.1.0",
