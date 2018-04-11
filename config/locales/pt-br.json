@@ -1246,5 +1246,7 @@
   "simple-event.find": "Eventos",
   "simple-event.create": "Adicionar evento",
   "user.post.find": "Postagens",
-  "municipio.find": "Municípios Conveniados"
+  "municipio.find": "Municípios Conveniados",
+  "user.registered.success.msg": "Usuário cadastrado com sucesso",
+  "Send": "Enviar"
 }
