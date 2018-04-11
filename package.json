@@ -13,7 +13,7 @@
     "dev": "node app.js --dev",
     "verbose": "node app.js --prod",
     "prod": "node app.js --prod",
-    "start": "node app.js",
+    "start": "npm run session",
     "docker-logs": "docker-compose logs --tail=100 -f site",
     "test": "NODE_ENV=test LOG_LV=info ./node_modules/.bin/mocha test/bootstrap.js test/**/*.test.js",
     "coverage": "NODE_ENV=test LOG_LV=info node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -u exports -R spec test/bootstrap.js test/**/*.test.js"
@@ -29,7 +29,7 @@
     "redis": "^2.8.0",
     "request": "^2.83.0",
     "we": "^1.5.9",
-    "we-admin-ong": "linkysystems/we-admin-ong#v1.2.9",
+    "we-admin-ong": "linkysystems/we-admin-ong#v1.2.10",
     "we-core": "^2.0.1",
     "we-passport-oauth2-password": "^2.0.0",
     "we-plugin-acl": "^1.2.12",
