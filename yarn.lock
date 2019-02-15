@@ -4264,9 +4264,9 @@ watchr@~2.4.13:
     taskgroup "^4.2.0"
     typechecker "^2.0.8"
 
-we-admin-ong@linkysystems/we-admin-ong#v1.2.11:
-  version "1.2.11"
-  resolved "https://codeload.github.com/linkysystems/we-admin-ong/tar.gz/07286ca54ea6df79cb2ef5154b4831f6c6a35252"
+we-admin-ong@linkysystems/we-admin-ong#v1.3.0:
+  version "1.3.0"
+  resolved "https://codeload.github.com/linkysystems/we-admin-ong/tar.gz/94b4b8e266c5d0d1f6148a1f596bb319e390d2f5"
 
 we-core-acl@^1.2.3:
   version "1.2.3"
