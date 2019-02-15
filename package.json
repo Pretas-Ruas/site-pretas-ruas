@@ -29,7 +29,7 @@
     "redis": "^2.8.0",
     "request": "^2.87.0",
     "we": "^1.5.9",
-    "we-admin-ong": "linkysystems/we-admin-ong#v1.2.12",
+    "we-admin-ong": "linkysystems/we-admin-ong#v1.13.0",
     "we-core": "^2.0.5",
     "we-passport-oauth2-password": "^2.0.0",
     "we-plugin-acl": "^1.2.13",
