@@ -49,7 +49,7 @@ module.exports = {
         'large',
         'banner',
         'bannerbig',
-        'slide',
+        // 'slide',
         'eventBanner'
       ],
       styles: {
@@ -58,7 +58,7 @@ module.exports = {
         large: { width: '640', heigth: '400' },
         banner: { width: '900', heigth: '300' },
         bannerbig: { width: '1920', heigth: '650' },
-        slide: { width: '1620', heigth: '1080' },
+        // slide: { width: '1620', heigth: '1080' },
         eventBanner: { width: '1920', heigth: '250' }
       }
     }
