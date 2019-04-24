@@ -1249,5 +1249,7 @@
   "municipio.find": "Municípios Conveniados",
   "user.registered.success.msg": "Usuário cadastrado com sucesso",
   "Send": "Enviar",
-  "Block": "Bloquear"
+  "Block": "Bloquear",
+  "Enable": "Ativar",
+  "Un Block": "Desbloquear"
 }
