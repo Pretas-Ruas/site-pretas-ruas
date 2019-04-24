@@ -1248,5 +1248,6 @@
   "user.post.find": "Postagens",
   "municipio.find": "Municípios Conveniados",
   "user.registered.success.msg": "Usuário cadastrado com sucesso",
-  "Send": "Enviar"
+  "Send": "Enviar",
+  "Block": "Bloquear"
 }
