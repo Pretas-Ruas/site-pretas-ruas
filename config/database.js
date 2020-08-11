@@ -2,20 +2,26 @@ let configs = {
   port: process.env.PORT || 4040,
   database: {
     prod: {
-      uri: process.env.DATABASE_URL || 'mysql://project:project@127.0.0.1:5606/project',
+      uri: process.env.DATABASE_URL,
       dialect: 'mysql',
-      protocol: 'mysql'
+      protocol: 'mysql',
+      charset: 'utf8',
+      collate: 'utf8_general_ci',
     },
     dev: {
-      uri: process.env.DATABASE_URL || 'mysql://project:project@127.0.0.1:5606/project',
+      //uri: process.env.DATABASE_URL,
+      uri: 'mysql://project:project@database/project',
       dialect: 'mysql',
-      protocol: 'mysql'
+      protocol: 'mysql',
+      charset: 'utf8',
+      collate: 'utf8_general_ci',
     },
     test: {
+      uri: process.env.DATABASE_URL,
       dialect: 'mysql',
-      database: 'test',
-      username: 'root',
-      password: ''
+      protocol: 'mysql',
+      charset: 'utf8',
+      collate: 'utf8_general_ci',
     }
   }
 }

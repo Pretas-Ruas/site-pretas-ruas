@@ -1,0 +1,70 @@
+---
+version: '3'
+services:
+  site:
+    user: root
+    build:
+      args:
+        NODE_ENV: development
+      context: .
+    ports:
+      - "5600:5600"
+    depends_on:
+      - database
+      - redis
+    volumes:
+      - ".:/usr/src/app"
+      - "./.data/uploads:/usr/src/app/files/uploads"
+    environment:
+      PORT: 5600
+      NODE_ENV: development
+      ENABLE_REQUEST_LOG: 1
+      DATABASE_URL: mysql://project:project@database/project
+      REDIS_URL: redis://redis/1
+      REDIS_SECRET: 'akad09k109k1d-dkqd-dk-kd-a0sd-d0'
+    command: npm run watch
+  cmd:
+    user: root
+    build:
+      args:
+        NODE_ENV: development
+      context: .
+    depends_on:
+      - database
+      - redis
+    volumes:
+      - ".:/usr/src/app"
+      - "./.data/uploads:/usr/src/app/files/uploads"
+    environment:
+      PORT: 5600
+      NODE_ENV: development
+      ENABLE_REQUEST_LOG: 1
+      DATABASE_URL: mysql://project:project@database/project
+      REDIS_URL: redis://redis/1
+      REDIS_SECRET: 'akad09k109k1d-dkqd-dk-kd-a0sd-d0'
+    command: tail -f /dev/null
+  redis:
+    image: redis
+    ports:
+      - "5679:6379"
+  database:
+    ports:
+      - "5606:3306"
+    image: mysql:5.7
+    volumes:
+      - "./.data/db:/var/lib/mysql"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: project
+      MYSQL_DATABASE: project
+      MYSQL_USER: project
+      MYSQL_PASSWORD: project
+  theme:
+    user: root
+    image: wejs:latest
+    depends_on:
+      - site
+    volumes:
+      - "./site/server/themes/monitor_v2:/usr/src/app"
+    environment:
+      NODE_ENV: development

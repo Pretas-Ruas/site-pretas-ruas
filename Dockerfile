@@ -1,12 +1,19 @@
-FROM node:8
+FROM wejs/wejs:v1.1.5
 
-# Install Graphicsmagick
-RUN apt-get update && apt-get install -y graphicsmagick
+RUN apt-get update && \
+  apt-get install -y build-essential python poppler-utils git && \
+  apt-get clean
 
-# Install We.js CLI and generators
-RUN npm install -g --silent we yo generator-wejs
+ARG NODE_ENV=production
+ENV NODE_ENV=${NODE_ENV}
 
-# Mount API folder in docker
-WORKDIR /usr/src/app
+RUN echo ${NODE_ENV}
 
-CMD ["node", "app.js"]
+RUN npm set audit false
+
+COPY package.json /usr/src/app/package.json
+RUN npm install
+
+COPY . /usr/src/app
+
+CMD ["npm", "start"]

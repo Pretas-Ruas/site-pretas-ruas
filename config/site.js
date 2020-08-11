@@ -5,6 +5,11 @@ module.exports = {
   subtitle: 'Nome do site',
   systemSettingsPubSubStrategy: 'redis',
 
+  mainActionEnabled: true,
+  mainActionText: 'Doações',
+  mainActionUrl: '/reservas',
+  mainActionIcon: '<i class="glyphicon glyphicon-briefcase"aria-hidden="true"></i>',
+
   // default favicon, change in your project config/local.js
   // favicon: path.resolve(__dirname, '..', 'files/public/favicon.png'),
   // logo public url path

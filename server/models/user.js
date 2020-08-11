@@ -209,15 +209,6 @@ module.exports = function UserModel(we) {
           }
         },
 
-        // returns an url alias
-        // urlAlias(record) {
-        //   return {
-        //     alias: '/'+ we.i18n.__('user') +'/' + record.id + '-'+  we.utils
-        //       .string( record.displayName ).slugify().s,
-        //     target: '/user/' + record.id,
-        //   };
-        // },
-
         loadPrivacity(record, done) {
           we.db.models.userPrivacity
           .findAll({
@@ -227,7 +218,6 @@ module.exports = function UserModel(we) {
           .then( (p)=> {
             record.privacity = p;
             done();
-            return null;
           })
           .catch(done);
         }

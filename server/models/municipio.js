@@ -92,10 +92,12 @@ module.exports = function hotelRoomModel(we) {
       classMethods: {
         // suport to we.js url alias feature
         urlAlias(record) {
+          let p2 = we.utils.stripTagsAndTruncate (
+            record.name || '', 30, ''
+          );
+
           return {
-            alias: '/municipios/' + record.id + '-'+  we.utils
-              .string( record.name )
-              .slugify().s,
+            alias: '/municipios/' + record.id + '-' + p2,
             target: '/municipio/' + record.id,
           };
         },

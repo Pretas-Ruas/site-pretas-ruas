@@ -23,5 +23,3 @@ try {
     transports: transports
   };
 }
-
-

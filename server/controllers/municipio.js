@@ -99,7 +99,6 @@ module.exports = {
       .then(function afterCreate (record) {
         res.locals.data = record;
         res.created();
-        return null;
       })
       .catch(res.queryError);
     } else {
@@ -147,7 +146,6 @@ module.exports = {
       .then(function afterUpdate (newRecord) {
         res.locals.data = newRecord;
         res.updated();
-        return null;
       })
       .catch(res.queryError);
     } else {

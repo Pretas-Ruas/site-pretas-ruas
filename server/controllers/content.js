@@ -71,7 +71,6 @@ module.exports = {
     .count(res.locals.query)
     .then( (count)=> {
       res.status(200).send({ count: count });
-      return null;
     })
     .catch(res.queryError);
   },
@@ -103,7 +102,6 @@ module.exports = {
       .then(function afterCreate (record) {
         res.locals.data = record;
         res.created();
-        return null;
       })
       .catch(res.queryError);
     } else {
@@ -141,7 +139,6 @@ module.exports = {
       .then(function afterUpdate (newRecord) {
         res.locals.data = newRecord;
         res.updated();
-        return null;
       })
       .catch(res.queryError);
     } else {
@@ -175,7 +172,6 @@ module.exports = {
       .then(function afterDestroy () {
         res.locals.deleted = true;
         res.deleted();
-        return null;
       })
       .catch(res.queryError);
     } else {
