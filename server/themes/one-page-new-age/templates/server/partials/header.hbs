@@ -1,0 +1,59 @@
+{{{template 'partials/header-topbar'}}}
+<div class="header-topbar">
+  <div class="container padding-none">
+    <div class="row">
+      <div class="col-xs-4 col-sm-4 col-md-4 welcome-text">
+        {{#if req.we.config.mainActionEnabled}}
+          <a href="{{req.we.config.mainActionUrl}}" class="btn btn-theme btn-topbar hvr-shutter-out-vertical btn-default">
+            {{{req.we.config.mainActionIcon}}}
+            <span class="hidden-xs">{{{req.we.config.mainActionText}}}</span>
+          </a>
+        {{else}}
+          {{#if req.we.config.isHotel}}
+            <a href="/reservas" class="btn btn-theme btn-topbar hvr-shutter-out-vertical btn-default">
+              <i class="glyphicon glyphicon-briefcase"aria-hidden="true"></i>
+              <span class="hidden-xs">Reservas</span>
+            </a>
+          {{/if}}
+          {{#if req.we.config.isONG}}
+            <a href="/doar" class="btn btn-theme btn-topbar hvr-shutter-out-vertical btn-default">
+              <i class="glyphicon glyphicon-gift"aria-hidden="true"></i>
+              <span class="hidden-xs">Doações</span>
+            </a>
+          {{/if}}
+        {{/if}}
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4">
+        {{we-menu menuSocial class="list-inline text-center icon-style-1"}}
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 text-right">
+        <a href="/site-contact" class="btn btn-theme btn-topbar hvr-shutter-out-vertical btn-default">
+          <i class="glyphicon glyphicon-phone-alt"aria-hidden="true"></i>
+          <span class="hidden-xs">Entre em contato</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<nav id="mainNav" class="navbar navbar-default {{#if req.we.systemSettings.logoUrlOriginal}}with-site-logo{{/if}}">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+        <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand page-scroll" href="/">
+        {{log req.we.systemSettings}}
+        {{#if req.we.systemSettings.logoUrlOriginal}}
+          <img src="{{req.we.systemSettings.logoUrlOriginal}}"
+               alt="Logo" >
+        {{/if}}
+        {{#if req.we.systemSettings.siteName}}
+          <span class="site-name">{{req.we.systemSettings.siteName}}</span>
+        {{/if}}
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar1">
+      {{we-menu menuMain class="nav navbar-nav navbar-right"}}
+    </div>
+  </div>
+</nav>

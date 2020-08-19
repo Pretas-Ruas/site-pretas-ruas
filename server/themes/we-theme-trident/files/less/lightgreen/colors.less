@@ -1,0 +1,49 @@
+@a-color: #00291e;
+@a-color-hover: #FEA313;
+@a-color-hover-2: #FEA313;
+
+@footer-bg: #8aff87;
+@footer-color: #00291e;
+@border-color: #ccc;
+@widget-title-color: #00291e;
+
+@header-topbar-bg: #8CFBAB;
+@header-topbar-color: #555;
+
+@a-color-hover: darken(@header-topbar-bg, 40%);
+@a-color-hover-2: @a-color-hover;
+
+@navbar-bg: #fff;
+@navbar-color: #000;
+@navbar-color-hover: @a-color-hover;
+@navbar-border: {
+  border-top: 1px solid darken(@header-topbar-bg, 50%);
+  border-bottom: 1px solid darken(@header-topbar-bg, 50%);
+  margin: 3px 0px;
+};
+@navbar-border-color: darken(@header-topbar-bg, 20%);
+@navbar-toggle: #222222;
+
+@header-subbar: {
+  border-top: 2px solid darken(@header-topbar-bg, 50%);
+  border-bottom: 1px solid darken(@header-topbar-bg, 47%);
+};
+
+@social-menu-a-bg: #fff;
+@social-menu-a-border: #adadad;
+@social-menu-a-color:  #00291e;
+@social-menu-a-hover-color: #000;
+@social-menu-a-hover-bg:  #022480;
+
+// @panel-default-border;
+// @panel-default-text;
+@panel-default-heading-bg: lighten(@header-topbar-bg, 13%);
+// @panel-default-border
+
+.widget-simple-event,
+.widget-news {
+  .panel {
+    border: 1px solid @border-color !important;
+    box-shadow: 0 1px 1px @border-color !important;
+  }
+}

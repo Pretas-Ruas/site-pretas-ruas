@@ -1,0 +1,24 @@
+{{#if req.user.id}}
+  <div id="weAdminBar">
+    <div class="container">
+      {{#if menuAuthenticated}}
+        <ul class="nav navbar-right">
+          <li>
+            <a href="/notification" class="main-menu-notification-link">
+              <span class="glyphicon glyphicon-bell"></span>
+              <span class="main-menu-link-notification-count badge"></span>
+              <span class="main-menu-notification-text">{{t 'notification.find'}}</span>
+            </a>
+          </li>
+          <li class="dropdown">
+            <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+              Olá, {{req.user.displayName}} {{we-avatar id=req.user.id style='thumbnail' width="18px"}}
+            </a>
+            {{we-menu menuAuthenticated class="dropdown-menu"}}
+          </li>
+        </ul>
+      {{else}}{{we-menu userMenu class="nav navbar-right"}}{{/if}}
+    </div>
+  </div>
+  <div id="afterWeadmin"></div>
+{{/if}}

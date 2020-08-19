@@ -1,0 +1,10 @@
+{{we-avatar id=user.id style='medium' width="100%" class="img-thumbnail avatar"}}
+<div class="user-actions">
+  {{we-action-edit-btn 'user'  user this.req user.id redirectTo=this.req.url}}
+</div>
+<div class="user-biography">
+  {{we-strip-tags text=user.biography maxLength=500}}
+  {{!-- {{{user.biography}}} --}}
+</div>
+
+{{#region 'profileSidebar'}}{{/region}}

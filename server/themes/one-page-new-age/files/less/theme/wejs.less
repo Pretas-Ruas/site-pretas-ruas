@@ -1,0 +1,234 @@
+#region-sidebar {
+  .widget-mailchimp-subscription-form {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+    h3 {
+      margin-top: 0px;
+    }
+  }
+}
+
+.with-site-logo {
+  .navbar-brand {
+    .site-name {
+      display: none;
+    }
+    img {
+      max-height: : 75px;
+      max-width: 180px;
+      width: auto;
+      margin-top: -16px;
+      z-index: 10;
+      position: absolute;
+    }
+  }
+}
+
+
+.widget-simple-event,
+.widget-news {
+  .widget-news-item {
+    border-bottom: 1px dashed @border-color;
+    margin-bottom: 10px;
+    min-height: 100px;
+
+    &:last-child  {
+      border-bottom: none;
+    }
+
+    .widget-news-featuredImage-link {
+      float: left;
+      margin-right: 5px;
+      margin-bottom: 2px;
+    }
+
+    .news-title {
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+
+    .widget-news-body {
+      p {
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+    }
+
+  }
+}
+
+.widget-simple-event {
+  .hotel-event-dates {
+    font-size: 12px;
+  }
+}
+
+#region-sidebar {
+  .widget {
+    .panel();
+    border-color: @border-color;
+
+    .widget-header {
+      .panel-heading();
+
+      color: @panel-default-text;
+      background-color: @panel-default-heading-bg;
+      border-color: @panel-default-border;
+
+      h3 {
+        font-family: inherit;
+        margin: 0px;
+        font-size: 14px;
+      }
+    }
+
+    .news-title {
+      margin-top: 0px;
+    }
+
+    .widget-content {
+      .panel-body();
+
+    }
+  }
+
+}
+
+body.body-main-index {
+  .hotel-event-teaser {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+
+    h2 {
+      margin-top: 0px;
+      font-size: 25px;
+    }
+
+    .hotel-event-about {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header-topbar {
+    min-height: 90px;
+    padding-bottom: 0px;
+  }
+
+  .header-logo-block-ct {
+    position: inherit;
+    left: 0;
+  }
+
+  .header-logo-block.with-logo-img {
+    .navbar-brand {
+      top: 0px;
+      padding: 0px;
+    }
+    .site-name {
+      display: none;
+    }
+  }
+
+  .navbar-brand {
+    position: inherit;
+    left: inherit;
+    top: inherit;
+    margin-top: -7px;
+    // border: 1px solid lighten(@header-topbar-bg, 10%);
+    // background-color: @header-topbar-bg;
+    display: inline-block;
+    color: @navbar-color;
+    float: none;
+    height: inherit;
+
+    img {
+      max-height: 70px;
+    }
+  }
+
+  .header-subbar {
+    display: none;
+  }
+
+  #region-content-widgets {
+    .widget-news {
+      .panel {
+        img {
+          margin: 0px auto;
+        }
+      }
+    }
+
+    .widget-group-newest {
+      text-align: center;
+    }
+  }
+
+  .hotel-event-teaser {
+    h2 {
+      margin-top: 10px;
+    }
+
+    .hotel-event-about {
+      margin-top: 5px;
+    }
+  }
+}
+
+.gallery-content-wrapper {
+  margin-bottom: 15px;
+}
+
+.gallery-list {
+  h4 {
+    a {
+      height: 39px;
+      display: block;
+      overflow: hidden;
+    }
+  }
+}
+
+.widget-gallery-list .widget-content  {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  img {
+    max-width: 100%;
+  }
+
+  h4 {
+    font-size: 16px !important;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 768px) {
+  .widget-gallery-list .widget-content  {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .widget-gallery-list .widget-content  {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .widget-gallery-list .widget-content  {
+    width: 1170px;
+  }
+}
+

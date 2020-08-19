@@ -1,0 +1,13 @@
+<div class="hotel-room-teaser">
+  {{#link-to-record record=record}}
+    <h2 class="hotel-room-name">
+      {{record.name}} {{#unless record.published}} <small><span class="label label-warning">Despublicado</span></small> {{/unless}}
+    </h2>
+  {{/link-to-record}}
+  {{#if record.featuredImage}}
+    {{#link-to-record record=record}}
+      {{we-image record.featuredImage "large" width="100%" class="img-thumbnail"}}
+    {{/link-to-record}}
+  {{/if}}
+  <p class="hotel-room-subname">{{{record.about}}}</p>
+</div>

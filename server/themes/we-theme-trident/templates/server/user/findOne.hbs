@@ -1,0 +1,12 @@
+<ul class="nav nav-tabs">
+  <li class="active">
+    <a href="{{data.linkPermanent}}">Postagens</a>
+  </li>
+  <li>
+    <a href="/user/{{data.id}}/group">Grupos</a>
+  </li>
+</ul>
+
+{{#if req.user.id}}
+  {{template 'post/sharebox' locals=this}}
+{{/if}}

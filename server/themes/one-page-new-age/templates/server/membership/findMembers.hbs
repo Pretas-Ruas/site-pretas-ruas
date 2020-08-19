@@ -1,0 +1,82 @@
+<ol class="breadcrumb">
+  <li><a href="/">Início</a></li>
+  <li><a href="/group">Grupos</a></li>
+  <li><a href="/group/{{group.id}}">{{we-strip-tags text=group.name maxLength=40}}</a></li>
+  <li class="active">Membros</li>
+</ol>
+
+<div class="row group-members">
+  <div class="col-lg-12">
+    <h1>{{title}}</h1>
+    <div class="actions">
+      <a href="/group/{{group.id}}/member/invite" class="btn btn-default btn-sm">Convidar membro</a>
+    </div>
+  </div>
+
+  <div class="col-md-8 col-lg-9">
+    <table class="table">
+    <tbody>
+      {{#each data}}
+        <tr class="group-member-teaser">
+          <td>
+            {{#link-to 'user.findOne' user.id}}
+              <span class="member-avatar">{{we-avatar id=userId style="thumbnail" width="50"}}</span>
+              <span class="member-name">{{user.displayName}}</span>
+            {{/link-to}}
+            <br>
+            <span class="text-muted">Membro desde: {{we-date createdAt}}</span>
+          </td>
+          <td>
+            {{#each roles}} {{t this}} <br>{{/each}}
+          </td>
+          <td>
+            <div class="actions">
+{{!--               <div>
+                {{#ifCond user.id ../req.user.id}}{{else}}
+                  {{{flag-follow
+                    modelName='user'
+                    modelId=user.id
+                    isFollowing=user.follow
+                    locals=..
+                  }}}
+                {{/ifCond}}
+              </div> --}}
+              {{#can permission='manage_group' roleNames=../req.userRoleNames}}
+                <div>
+                  {{#we-contains roles 'manager'}}
+                    <form action="/group/{{groupId}}/member/{{userId}}/removeRole" method="post">
+                      <input type="hidden" name="redirectTo" value="{{../req.url}}">
+                      <input type="hidden" name="role" value="manager">
+                      <button class="btn btn-sm btn-danger">{{t 'group.member.remove.manager.role'}}</button>
+                    </form>
+                  {{else}}
+                    <form action="/group/{{groupId}}/member/{{userId}}/addRole" method="post">
+                        <input type="hidden" name="redirectTo" value="{{../req.url}}">
+                      <input type="hidden" name="role" value="manager">
+                      <button class="btn btn-sm btn-success">{{t 'group.member.add.manager.role'}}</button>
+                    </form>
+                  {{/we-contains}}
+                </div>
+              {{/can}}
+            </div>
+          </td>
+        </tr>
+      {{else}}
+        <tr>
+          <td>
+            <div class="jumbotron text-center">
+              {{t 'group.member.empty'}}
+            </div>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+    </table>
+    <div>
+      {{paginate count=metadata.count limit=query.limit currentPage=query.page req=req}}
+    </div>
+  </div>
+  <div class="col-md-4 col-lg-3">
+    {{template 'group/sidebar' locals=this}}
+  </div>
+</div>

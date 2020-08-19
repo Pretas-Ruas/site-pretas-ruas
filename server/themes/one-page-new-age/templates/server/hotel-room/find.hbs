@@ -1,0 +1,28 @@
+<ol class="breadcrumb">
+  <li><a href="/">Início</a></li>
+  <li class="active">Quartos</li>
+</ol>
+
+<h1 class="hotel-rooms-title">Quartos</h1>
+
+<div class="row hotel-rooms">
+  {{#each data}}
+    <div class="col-sm-12 col-md-6 col-lg-6 match-grid-col-scroll">
+      <div class="hotel-room-record-teaser">
+        {{render-record-teaser modelName='hotel-room' record=this locals=..}}
+      </div>
+    </div>
+  {{else}}
+    <div class="col-md-12">
+      <p class="contents-empty">Nenhum quarto foi encontrado para essa lista.</p>
+    </div>
+  {{/each}}
+
+  <div class="col-md-12">
+    {{paginate count=metadata.count limit=query.limit currentPage=query.page req=req}}
+  </div>
+
+  <div class="col-md-12">
+    {{#region 'content'}}{{/region}}
+  </div>
+</div>

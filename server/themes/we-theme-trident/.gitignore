@@ -51,16 +51,8 @@ files/wejsdoc
 .tmp
 config/locals.js
 config/local.js
-config/log-local.js
 
 package-lock.json
 
 db-settings-watch-file.txt
 files/sync-*
-
-exported-data
-install-local.js
-
-# server/themes
-
-.data
