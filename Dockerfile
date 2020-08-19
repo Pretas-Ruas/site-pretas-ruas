@@ -1,4 +1,4 @@
-FROM wejs/wejs:v1.1.5
+FROM wejs/wejs:v1.1.6
 
 RUN apt-get update && \
   apt-get install -y build-essential python poppler-utils git && \
