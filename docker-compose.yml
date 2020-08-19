@@ -59,12 +59,3 @@ services:
       MYSQL_DATABASE: project
       MYSQL_USER: project
       MYSQL_PASSWORD: project
-  theme:
-    user: root
-    image: wejs:latest
-    depends_on:
-      - site
-    volumes:
-      - "./site/server/themes/monitor_v2:/usr/src/app"
-    environment:
-      NODE_ENV: development

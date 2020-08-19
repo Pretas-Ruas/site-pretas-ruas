@@ -53,8 +53,6 @@ config/locals.js
 config/local.js
 config/log-local.js
 
-package-lock.json
-
 db-settings-watch-file.txt
 files/sync-*
 
