@@ -65,7 +65,8 @@
     "we-plugin-widget": "^3.0.0",
     "winston": "3.3.3",
     "we-plugin-gallery": "^1.1.2",
-    "we-admin-ong": "linkysystems/we-admin-ong#v1.3.6"
+    "we-admin-ong": "linkysystems/we-admin-ong#v1.3.6",
+    "we-plugin-basic-auth": "^1.0.1"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
@@ -114,7 +115,8 @@
       "we-plugin-simple-event": true,
       "we-plugin-mailchimp-sb": true,
       "we-admin-ong": true,
-      "we-plugin-gallery": true
+      "we-plugin-gallery": true,
+      "we-plugin-basic-auth": true
     },
     "devPlugins": {}
   }
