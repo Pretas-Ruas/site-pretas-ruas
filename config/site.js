@@ -1,13 +1,13 @@
 // var path = require('path');
 module.exports = {
   isONG: true,
-  appName: 'Site',
-  subtitle: 'Nome do site',
+  appName: 'Pretas Ruas',
+  subtitle: '',
   systemSettingsPubSubStrategy: 'redis',
 
   mainActionEnabled: true,
-  mainActionText: 'Doações',
-  mainActionUrl: '/reservas',
+  mainActionText: 'Apoie',
+  mainActionUrl: '/apoie',
   mainActionIcon: '<i class="glyphicon glyphicon-briefcase"aria-hidden="true"></i>',
 
   // default favicon, change in your project config/local.js
