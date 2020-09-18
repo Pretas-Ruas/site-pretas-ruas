@@ -15,8 +15,6 @@ services:
     volumes:
       - ".:/usr/src/app"
       - "./.data/uploads:/usr/src/app/files/uploads"
-      - "/home/a/project/plugins/we-plugin-menu:/usr/src/app/node_modules/we-plugin-menu"
-      - "/home/a/project/plugins/we-plugin-sys-pubsub:/usr/src/app/node_modules/we-plugin-sys-pubsub"
     environment:
       PORT: 5800
       NODE_ENV: development
