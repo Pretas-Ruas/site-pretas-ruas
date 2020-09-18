@@ -1,4 +1,5 @@
-// var path = require('path');
+const path = require('path');
+
 module.exports = {
   isONG: true,
   appName: 'Pretas Ruas',
@@ -16,7 +17,7 @@ module.exports = {
   mainActionIcon: '<i class="glyphicon glyphicon-briefcase"aria-hidden="true"></i>',
 
   // default favicon, change in your project config/local.js
-  // favicon: path.resolve(__dirname, '..', 'files/public/favicon.png'),
+  favicon: path.resolve(__dirname, '..', 'files/public/favicon.ico'),
   // logo public url path
   appLogo: '/public/project/logo.jpg',
 
