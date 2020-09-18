@@ -1,7 +1,7 @@
 {
   "name": "wejs-ong-site",
   "description": "We.js ONG solution",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "private": true,
   "main": "./app.js",
   "scripts": {
