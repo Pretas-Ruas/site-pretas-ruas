@@ -49,43 +49,6 @@ module.exports = {
       .catch(done);
     });
 
-    fns.push(function registerUser2(done) {
-      const user1 = {
-        username: 'alberto',
-        email: 'contato@albertosouza.net',
-        password: '123', // change after install
-        displayName: 'Alberto',
-        active: true,
-        roles: []
-      };
-
-      we.log.info('I will create the user: ', user1);
-
-      we.db.models.user.findOrCreate({
-        where: { email: user1.email },
-        defaults: user1
-      })
-      .spread( (user)=> {
-        we.log.info('New User with id: ', user.id);
-        // install we-plugin-auth for use password
-        if (!we.db.models.password) {
-          done();
-          return null;
-        }
-        // set the password
-        return we.db.models.password.create({
-          userId: user.id,
-          password: user1.password,
-          confirmPassword: user1.password
-        })
-        .then( ()=> {
-          done();
-          return null;
-        });
-      })
-      .catch(done);
-    });
-
     fns.push(function registerHomeSlideshow(done) {
       const data = {
         name: 'Home slideshow',
@@ -112,97 +75,9 @@ module.exports = {
             // then create menu links
             we.db.models.link.bulkCreate([
               {
-                href: '/o-hotel',
-                text: 'O hotel',
-                title: 'Hotel Dom Henrique',
-                menuId: r.id
-              },
-                {
-                  href: '/quartos',
-                  text: 'Nossos quartos',
-                  title: 'Nossos quartos',
-                  menuId: r.id,
-                  parent: 1,
-                  weight: 5,
-                  depth: 1
-                },
-                  // {
-                  //   href: '/quarto-standard',
-                  //   text: 'Quarto Standard',
-                  //   title: 'Quarto Standard',
-                  //   menuId: r.id,
-                  //   parent: 2,
-                  //   weight: 5,
-                  //   depth: 2
-                  // },
-                  // {
-                  //   href: '/quarto-luxo',
-                  //   text: 'Quarto Luxo',
-                  //   title: 'Quarto Luxo',
-                  //   menuId: r.id,
-                  //   parent: 2,
-                  //   weight: 6,
-                  //   depth: 2
-                  // },
-                  // {
-                  //   href: '/quarto-de-assessibilidade',
-                  //   text: 'Quarto de Assessibilidade',
-                  //   title: 'Quarto de Assessibilidade',
-                  //   menuId: r.id,
-                  //   parent: 2,
-                  //   weight: 7,
-                  //   depth: 2
-                  // },
-                  // {
-                  //   href: '/quarto-de-assessibilidade',
-                  //   text: 'Quarto de Assessibilidade',
-                  //   title: 'Quarto de Assessibilidade',
-                  //   menuId: r.id,
-                  //   parent: 2,
-                  //   weight: 7,
-                  //   depth: 2
-                  // },
-                  // {
-                  //   href: '/suite-presidencial',
-                  //   text: 'Suíte Presidencial',
-                  //   title: 'Suíte Presidencial',
-                  //   menuId: r.id,
-                  //   parent: 2,
-                  //   weight: 8,
-                  //   depth: 2
-                  // },
-                {
-                  href: '/reservas',
-                  text: 'Reservas',
-                  title: 'Reservas',
-                  menuId: r.id,
-                  parent: 1,
-                  weight: 5,
-                  depth: 1
-                },
-                {
-                  href: '/como-chegar',
-                  text: 'Como chegar',
-                  title: 'Como chegar',
-                  menuId: r.id,
-                  parent: 1,
-                  weight: 6,
-                  depth: 1
-                },
-                {
-                  href: '/eventos',
-                  text: 'Eventos',
-                  title: 'Eventos',
-                  menuId: r.id,
-                  parent: 1,
-                  weight: 7,
-                  depth: 1
-                },
-
-              {
-                href: '/restalrante-baia-cabralia',
-                text: 'Restaurante Baía Cabrália',
-                title: 'Restaurante Baía Cabrália',
+                href: '/sobre',
+                text: 'Sobre o Pretas Ruas',
+                title: 'Sobre',
                 menuId: r.id
               },
               {
@@ -214,11 +89,8 @@ module.exports = {
             ])
             .then( ()=> {
               done();
-              return null;
             })
             .catch(done);
-
-            return null;
           })
           .catch(done);
         },
@@ -285,12 +157,9 @@ module.exports = {
         alias: '/noticias',
         target: '/vocabulary/Category/term/Notícias',
         locale: 'pt-BR'
-      }, {
-        alias: '/quartos',
-        target: '/hotel-room',
-        locale: 'pt-BR'
-      }, {
-        alias: '/quem-somos',
+      },
+      {
+        alias: '/sobre',
         target: '/content/1',
         locale: 'pt-BR'
       }])
@@ -327,16 +196,13 @@ module.exports = {
       we.db.models['system-setting']
       .bulkCreate([{
         key: 'siteName',
-        value: 'Hotel Dom Henrique',
+        value: 'Pretas Ruas',
       }, {
         key: 'siteDescription',
-        value: `Criado para ser um marco na hotelaria timotense, o Hotel Dom Henrique se destaca pela qualidade, sofisticação e requinte dispensados à você desde a reserva até o check-out.`,
-      }, {
-        key: 'googleMapsKey',
-        value: 'AIzaSyDa_THpEmCgLPCOKDIj-q7IRTkyIku99TE',
+        value: `Descrição...`,
       }, {
         key: 'emailContact',
-        value: `nao-responda <contato@hoteldomhenrique.com.br>`,
+        value: `nao-responda <contato@pretasruas.com.br>`,
       }])
       .spread( ()=> {
         we.log.info('First system-setting created');

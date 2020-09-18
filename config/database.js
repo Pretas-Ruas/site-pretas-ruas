@@ -10,7 +10,7 @@ let configs = {
     },
     dev: {
       //uri: process.env.DATABASE_URL,
-      uri: 'mysql://project:project@database/project',
+      uri: process.env.DATABASE_URL,
       dialect: 'mysql',
       protocol: 'mysql',
       charset: 'utf8',

@@ -3,6 +3,11 @@ module.exports = {
   isONG: true,
   appName: 'Pretas Ruas',
   subtitle: '',
+
+  sysPubsub: {
+    serviceName: 'redis',
+    redisURL: process.env.REDIS_URL,
+  },
   systemSettingsPubSubStrategy: 'redis',
 
   mainActionEnabled: true,

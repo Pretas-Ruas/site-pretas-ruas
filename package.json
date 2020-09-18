@@ -108,7 +108,8 @@
       "we-plugin-simple-event": true,
       "we-plugin-mailchimp-sb": true,
       "we-admin-ong": true,
-      "we-plugin-gallery": true
+      "we-plugin-gallery": true,
+      "we-plugin-sys-pubsub": true
     },
     "devPlugins": {}
   }
