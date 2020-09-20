@@ -39,3 +39,16 @@ services:
       MYSQL_DATABASE: project
       MYSQL_USER: project
       MYSQL_PASSWORD: project
+
+  theme:
+    user: root
+    image: node:8
+    depends_on:
+      - site
+    volumes:
+      - "./server/themes/one-page-new-age:/usr/src/app"
+    environment:
+      NODE_ENV: development
+    working_dir: /usr/src/app
+    command: npm start
+    # command: tail -f /dev/null

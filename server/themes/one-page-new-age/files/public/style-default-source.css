@@ -6738,7 +6738,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #fcbd20;
+  color: #f67201;
 }
 hr {
   max-width: 100px;
@@ -6786,7 +6786,7 @@ p {
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-  color: #fcbd20;
+  color: #f67201;
 }
 .navbar-default .navbar-header .navbar-toggle {
   font-size: 12px;
@@ -6805,11 +6805,11 @@ p {
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-  color: #fcbd20;
+  color: #f67201;
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: #fcbd20;
+  color: #f67201;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a:hover,
@@ -6830,7 +6830,7 @@ p {
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: #fcbd20;
+    color: #f67201;
   }
   .navbar-default.affix .nav > li > a,
   .navbar-default.affix .nav > li > a:focus {
@@ -6838,7 +6838,7 @@ p {
   }
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
-    color: #fcbd20;
+    color: #f67201;
   }
 }
 header {
@@ -7082,12 +7082,12 @@ footer ul li a.active {
   text-decoration: none;
 }
 .bg-primary {
-  background: #fcbd20;
-  background: -webkit-linear-gradient(#fcbd20, #fdc539);
-  background: linear-gradient(#fcbd20, #fdc539);
+  background: #f67201;
+  background: -webkit-linear-gradient(#f67201, #f67201);
+  background: linear-gradient(#f67201, #f67201);
 }
 .text-primary {
-  color: #fcbd20;
+  color: #f67201;
 }
 .no-gutter > [class*='col-'] {
   padding-right: 0;
@@ -7103,8 +7103,8 @@ footer ul li a.active {
 .btn-outline:active,
 .btn-outline.active {
   color: white;
-  background-color: #fcbd20;
-  border-color: #fcbd20;
+  background-color: #f67201;
+  border-color: #f67201;
 }
 .btn {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
@@ -7290,7 +7290,7 @@ hr {
   padding-bottom: 5px;
 }
 .header-topbar {
-  background-color: #FFD15A;
+  background-color: #f67201;
   padding: 15px 0;
   color: #000;
 }
@@ -8032,7 +8032,7 @@ body.body-main-index #region-content .widget.widget-slideshow a.btn {
   font-size: 10px;
 }
 body.body-main-index #region-content .widget.widget-slideshow a.btn:hover {
-  background-color: #fcbd20;
+  background-color: #f67201;
 }
 body.body-main-index #region-content .widget.widget-slideshow .header-content .header-content-inner {
   position: relative;
