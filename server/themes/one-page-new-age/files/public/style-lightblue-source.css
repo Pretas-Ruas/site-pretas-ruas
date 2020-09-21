@@ -6887,7 +6887,7 @@ header .device-container .screen img {
   header .header-content {
     text-align: left;
     padding: 0;
-    height: 70vh;
+    height: 100vh;
   }
   header .header-content .header-content-inner {
     max-width: none;
@@ -8073,7 +8073,7 @@ body.body-main-index #region-content .widget.widget-slideshow .device-container 
   body.body-main-index #region-content .widget.widget-slideshow .header-content {
     text-align: left;
     padding: 0;
-    height: 70vh;
+    height: 100vh;
   }
   body.body-main-index #region-content .widget.widget-slideshow .header-content .header-content-inner {
     max-width: none;
