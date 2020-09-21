@@ -15,6 +15,8 @@ services:
     volumes:
       - ".:/usr/src/app"
       - "./.data/uploads:/usr/src/app/files/uploads"
+      - "/home/a/project/plugins/we-plugin-menu:/usr/src/app/node_modules/we-plugin-menu"
+      - "/home/a/project/plugins/we-plugin-sys-pubsub:/usr/src/app/node_modules/we-plugin-sys-pubsub"
     environment:
       PORT: 5800
       NODE_ENV: development
@@ -23,6 +25,27 @@ services:
       REDIS_URL: redis://redis/1
       REDIS_SECRET: 'akad09k109k1d-dkqd-dk-kd-a0sd-d0'
     command: npm run watch
+
+  cmd:
+    user: root
+    build:
+      args:
+        NODE_ENV: development
+      context: .
+    depends_on:
+      - database
+      - redis
+    volumes:
+      - ".:/usr/src/app"
+      - "./.data/uploads:/usr/src/app/files/uploads"
+    environment:
+      PORT: 5800
+      NODE_ENV: development
+      ENABLE_REQUEST_LOG: 1
+      DATABASE_URL: mysql://project:project@database/project
+      REDIS_URL: redis://redis/1
+      REDIS_SECRET: 'akad09k109k1d-dkqd-dk-kd-a0sd-d0'
+    command: tail -f /dev/null
   redis:
     image: redis
     ports:
