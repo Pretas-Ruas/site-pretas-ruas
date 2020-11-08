@@ -65,7 +65,7 @@
     "we-plugin-widget": "^3.0.0",
     "winston": "3.3.3",
     "we-plugin-gallery": "^1.1.2",
-    "we-admin-ong": "linkysystems/we-admin-ong#v1.3.6",
+    "we-admin-ong": "linkysystems/we-admin-ong#v1.4.0",
     "we-plugin-basic-auth": "^1.0.1"
   },
   "devDependencies": {

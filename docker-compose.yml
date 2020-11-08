@@ -15,6 +15,7 @@ services:
     volumes:
       - ".:/usr/src/app"
       - "./.data/uploads:/usr/src/app/files/uploads"
+      #  - "/home/a/project/ember/we-admin-ong:/usr/src/app/node_modules/we-admin-ong"
     environment:
       PORT: 5600
       NODE_ENV: development
@@ -46,10 +47,10 @@ services:
   redis:
     image: redis
     ports:
-      - "5679:6379"
+      - "5779:6379"
   database:
     ports:
-      - "5606:3306"
+      - "5706:3306"
     image: mysql:5.7
     volumes:
       - "./.data/db:/var/lib/mysql"
