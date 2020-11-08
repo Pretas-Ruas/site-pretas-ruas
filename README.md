@@ -1,4 +1,6 @@
-# We.js 3sector colaborative portal solution
+# Site do projeto Pretas Ruas
+
+> In development!
 
 ## Build With:
 

@@ -8,7 +8,7 @@ services:
         NODE_ENV: development
       context: .
     ports:
-      - "5600:5600"
+      - "5800:5800"
     depends_on:
       - database
       - redis
@@ -17,40 +17,43 @@ services:
       - "./.data/uploads:/usr/src/app/files/uploads"
       #  - "/home/a/project/ember/we-admin-ong:/usr/src/app/node_modules/we-admin-ong"
     environment:
-      PORT: 5600
+      PORT: 5800
       NODE_ENV: development
       ENABLE_REQUEST_LOG: 1
       DATABASE_URL: mysql://project:project@database/project
       REDIS_URL: redis://redis/1
       REDIS_SECRET: 'akad09k109k1d-dkqd-dk-kd-a0sd-d0'
     command: npm run watch
-  cmd:
-    user: root
-    build:
-      args:
-        NODE_ENV: development
-      context: .
-    depends_on:
-      - database
-      - redis
-    volumes:
-      - ".:/usr/src/app"
-      - "./.data/uploads:/usr/src/app/files/uploads"
-    environment:
-      PORT: 5600
-      NODE_ENV: development
-      ENABLE_REQUEST_LOG: 1
-      DATABASE_URL: mysql://project:project@database/project
-      REDIS_URL: redis://redis/1
-      REDIS_SECRET: 'akad09k109k1d-dkqd-dk-kd-a0sd-d0'
-    command: tail -f /dev/null
+
+  # cmd:
+  #   user: root
+  #   build:
+  #     args:
+  #       NODE_ENV: development
+  #     context: .
+  #   depends_on:
+  #     - database
+  #     - redis
+  #   volumes:
+  #     - ".:/usr/src/app"
+  #     - "./.data/uploads:/usr/src/app/files/uploads"
+  #   environment:
+  #     PORT: 5800
+  #     NODE_ENV: development
+  #     ENABLE_REQUEST_LOG: 1
+  #     DATABASE_URL: mysql://project:project@database/project
+  #     REDIS_URL: redis://redis/1
+  #     REDIS_SECRET: 'akad09k109k1d-dkqd-dk-kd-a0sd-d0'
+  #   command: tail -f /dev/null
+
   redis:
     image: redis
     ports:
       - "5779:6379"
+
   database:
     ports:
-      - "5706:3306"
+      - "5806:3306"
     image: mysql:5.7
     volumes:
       - "./.data/db:/var/lib/mysql"
@@ -60,3 +63,16 @@ services:
       MYSQL_DATABASE: project
       MYSQL_USER: project
       MYSQL_PASSWORD: project
+
+  theme:
+    user: root
+    image: node:8
+    depends_on:
+      - site
+    volumes:
+      - "./server/themes/one-page-new-age:/usr/src/app"
+    environment:
+      NODE_ENV: development
+    working_dir: /usr/src/app
+    command: npm start
+    # command: tail -f /dev/null

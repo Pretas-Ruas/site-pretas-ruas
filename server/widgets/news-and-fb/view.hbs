@@ -1,0 +1,50 @@
+{{#if widget.news.length}}
+  {{#ifCond widget.layout "home"}}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          {{#if widget.news.length}}
+            {{#we-grid items=widget.news cols=2}}
+              <div class="widget-news-panel panel panel-default match-grid-col-scroll">
+                {{#each featuredImage}}
+                  <a href="/news/{{../id}}"><img class="img-responsive" src="{{urls.large}}"></a>
+                {{/each}}
+                <div class="panel-body">
+                  <h4><a href="/news/{{id}}">{{title}}</a></h4>
+                  <p>
+                    {{{about}}}
+                    <br><a href="/news/{{id}}">leia mais <i class="glyphicon glyphicon-link"></i></a>
+                  </p>
+                </div>
+              </div>
+            {{/we-grid}}
+          {{/if}}
+          <div class="text-center">
+            <a href="/news" class="btn btn-default">Mais notícias</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          {{#if widget.fbPageId}}
+            <div class="fb-page" data-href="https://www.facebook.com/{{widget.fbPageId}}/" data-tabs="timeline,messages,events" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/{{widget.fbPageId}}/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/{{widget.fbPageId}}/">{{widget.siteName}}</a></blockquote></div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  {{else}}
+    {{#each widget.news}}
+      <div class="widget-news-item">
+        {{#each featuredImage}}
+          <a href="/news/{{../id}}" class="widget-news-featuredImage-link thumbnail"><img class="widget-news-featuredImage" src="{{urls.thumbnail}}"></a>
+        {{/each}}
+        <div class="widget-news-body">
+          <h4 class="news-title">
+            <a href="/news/{{id}}">{{title}}</a></h4>
+          <p>
+            {{{about}}}
+            <br><a href="/news/{{id}}">leia mais <i class="glyphicon glyphicon-link"></i></a>
+          </p>
+        </div>
+      </div>
+    {{/each}}
+  {{/ifCond}}
+{{/if}}
